@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 int main() {
-std::cout << "/* message */" << std::endl;
+    int age = 25;
+    cout << "Age is " << age << endl;
 return 0;
 }
