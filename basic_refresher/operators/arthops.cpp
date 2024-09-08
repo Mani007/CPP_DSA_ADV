@@ -23,6 +23,11 @@ cout << "Relational operators for not equal " << (num1 != num2) << endl;
 cout << "Logical operators for not " << !(num1 != num2) << endl;   // Logical not operator
 cout << "Logical operators for and && " << ((num1 < num2) && (5>2)) << endl;  // logical and operator, pay attention to brackets
 cout << "Logical operators for or || " << ((num1 < num2) || (5>2)) << endl;  // logical or operator, pay attention to brackets
-
+cout << "Unary operator for ++ is num++ " << (num1++) << endl; // first progress then update value of num1 
+cout << "Unary operator for ++ is ++num " << (++num1) << endl; // first update the value of num1 then progress
+cout << "Unary operator for ++ is num=+1 " << (num1=+1) << endl; // increment the value of num1 and update it
+cout << "Unary operator for ++ is num=-1 " << (num1=-1) << endl; // increment the value of num1 and update it
+cout << "Unary operator for ++ is num+=1 " << (num1+=1) << endl; // increment the value of num1 and update it
+cout << "Unary operator for -- is num+=1 " << (num1-=1) << endl; // decrement the value of num1 and update it
 return 0;
 }
