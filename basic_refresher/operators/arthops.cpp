@@ -20,6 +20,9 @@ cout << "Relational operators for >= " << (num1 >= num2) << endl; // make sure y
 cout << "Relational operators for < " << (num1 < num2) << endl;
 cout << "Relational operators for <= " << (num1 <= num2) << endl;
 cout << "Relational operators for not equal " << (num1 != num2) << endl; 
+cout << "Logical operators for not " << !(num1 != num2) << endl;   // Logical not operator
+cout << "Logical operators for and && " << ((num1 < num2) && (5>2)) << endl;  // logical and operator, pay attention to brackets
+cout << "Logical operators for or || " << ((num1 < num2) || (5>2)) << endl;  // logical or operator, pay attention to brackets
 
 return 0;
 }
