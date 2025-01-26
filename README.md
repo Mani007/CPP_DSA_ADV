@@ -67,4 +67,19 @@ These concepts are worth the refresher.
 23.  Union Find (Disjoint Set)
 24. Page rank algorithms     
 And many other algorithms  
+## Competitive Programming  
+Look for best books, blogs,interviews, Indian youtubers and profiles in codeforces. 
+## DSA practices platforms
+1. Leetcode
+2. Hacker rank
+3. Linkedin 
+4. Interview bit
+5. Code forces 
+6. Code chef
+## Competitions  
+1. Codeforces
+2. ICPC 
+3. Informatics Olympiad 
+4. CP initiate
+5. USACO 
 
