@@ -9,5 +9,8 @@ int main() {
   cout<<"address in pointer ptr is " << ptr<<endl;
   cout<<"address OF pointer ptr is " << &ptr<<endl;
   cout<<"value in pointer ptr is " << *ptr<<endl;
+  cout<<"size of var1 is " << sizeof(var1)<<" Bytes"<<endl;
+  cout<<"size of ptr is " << sizeof(ptr) << " Bytes"<<endl;
+
   return 0;
 }
