@@ -11,6 +11,13 @@ int main() {
   cout<<"value of var1 is " << var1<<endl;
   cout<<"address of var1 is " << &var1<<endl;
   cout<<"address in pointer ptr1 is " << ptr1<<endl;
+  cout<<"address in pointer ptr2 is " << ptr2<<endl;
+  cout<<"address in pointer ptr1 using ptr1 by *(ptr2) is " << *(ptr2)<<endl;
+  //cout<<"address in pointer ptr3 is " << ptr3<<endl;
+  cout<<"address in pointer ptr1 using ptr2 by *(*ptr3) is " << *(*ptr3)<<endl;
+  cout<<"value in pointer ptr3 using ptr1 by **(*ptr3) is " << **(*ptr3)<<endl;
+  cout<<"ptr2->ptr1 this is valid only for structure and classes"<<endl;
+  cout<<"address in pointer ptr1 is " << ptr1<<endl;
   cout<<"address OF pointer ptr1 is " << &ptr1<<endl;
   cout<<"value in pointer ptr1 is " << *ptr1<<endl;
   cout<<"value in pointer ptr2 is " << **ptr2<<endl;
