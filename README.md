@@ -84,9 +84,9 @@ Look for best books, blogs,interviews, Indian youtubers and profiles in codeforc
 5. USACO 
 
 ## Some cool extensions, tools, materials and websites
-1. Use memory profiler such as memory view extension in VS code. 
+1. Use memory profiler such as **memory view** extension in VS code. 
 2. Use [Visualize coding platform - python tutor](https://pythontutor.com/)
 3. Use [Exposed float and binary values](https://float.exposed/)
 ## Tutorials  
-1. Basics od pointers [Link](https://www.youtube.com/watch?v=MIL2BK02X8A)
+1. Basics of pointers [Link](https://www.youtube.com/watch?v=MIL2BK02X8A)
 2. 
