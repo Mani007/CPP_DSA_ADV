@@ -13,8 +13,8 @@ int main() {
   cout<<"address in pointer ptr1 is " << ptr1<<endl;
   cout<<"address OF pointer ptr1 is " << &ptr1<<endl;
   cout<<"value in pointer ptr1 is " << *ptr1<<endl;
-  cout<<"value in pointer ptr2 is " << **ptr1<<endl;
-  cout<<"value in pointer ptr3 is " << ***ptr1<<endl;
+  cout<<"value in pointer ptr2 is " << **ptr2<<endl;
+  cout<<"value in pointer ptr3 is " << ***ptr3<<endl;
   cout<<"size of var1 is " << sizeof(var1)<<" Bytes"<<endl;
   cout<<"size of ptr is " << sizeof(ptr1) << " Bytes"<<endl;
 
