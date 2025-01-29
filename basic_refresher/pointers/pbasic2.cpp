@@ -26,6 +26,6 @@ int ADD(int a, int b) {
 return a + b;
 }
 int ADDREF(int *a, int *b, string *slocal) {
-cout << "Local string by value is "<<*slocal << endl;
+cout << "Local string by address is "<<slocal << endl;
 return *a + *b;
 }
