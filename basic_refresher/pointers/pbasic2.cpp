@@ -13,7 +13,7 @@ int b = 20;
 cout << "Giving a SUM function call below" << endl;
 ans = ADD(4,3); // parameter passed by value
 cout << "The ADD of 4 and 3 using function ADD function by value is: " << ans << endl;
-ansref = ADDREF(&a,&b,&str); // parameter passed by value
+ansref = ADDREF(&a,&b,str); // parameter passed by value
 cout << "The ADDREF of 4 and 3 using function ADDREF function by value is: " << ansref << endl;
     
 
