@@ -76,6 +76,7 @@ Look for best books, blogs,interviews, Indian youtubers and profiles in codeforc
 4. Interview bit
 5. Code forces 
 6. Code chef
+7. Code wars
 ## Competitions  
 1. Codeforces
 2. ICPC 
