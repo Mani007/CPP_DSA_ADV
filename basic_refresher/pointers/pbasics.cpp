@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 int main() {
-    int f=43;
+    int f=0b100000;
     int *ptr;  // void pointer often used to store object
     ptr = &f;  // store address of float in void pointer
     cout << " int pointer values " << *ptr <<endl;
