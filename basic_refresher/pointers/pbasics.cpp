@@ -11,7 +11,7 @@ int main() {
     cout << " int pointer increment to 1  and value is "  << *(ptr+1) << endl;
     cout << " int pointer address increment to 2  "  << ptr+2 << endl;
     cout << " int pointer address increment to 2  "  << *(ptr+2) << endl;
-   
+   // pointer increment formula is ptr+(n* sizeof(type))
     
 return 0;
 }
