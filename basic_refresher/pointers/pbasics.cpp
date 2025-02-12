@@ -1,17 +1,26 @@
 #include <iostream>
 #include <iomanip>
 using namespace std;
+void vptr(void* data, char datatype);
 int main() {
-    int i=25;
-    int *ptr;  // void pointer often used to store object
-    ptr = &i;  // store address of float in void pointer
-    cout << " int pointer values " << *ptr <<endl;
-    cout << " int pointer address   "  << ptr << endl;
-    cout << " int pointer address increment to 1   "  << ptr+1 << endl;
-    cout << " int pointer increment to 1  and value is "  << *(ptr+1) << endl;
-    cout << " int pointer address increment to 2  "  << ptr+2 << endl;
-    cout << " int pointer address increment to 2  "  << *(ptr+2) << endl;
-   // pointer increment formula is ptr+(n* sizeof(type))
-    
+   // void pointer use case
+   int i1=25;
+   float f1 = 10.2;
+   char c1 = 'a';
+   vptr(&i1,'i');
+   vptr(&f1,'f');
+   vptr(&c1,'c'); 
 return 0;
+}
+
+void vptr(void* data, char datatype){
+    if (datatype == 'i'){
+        cout<< "integer i data type is "<< *(int*)data<< endl;
+    }
+    if (datatype == 'f'){
+        cout<< "float f data type is "<< *(float*)data<< endl;
+    }
+    if (datatype == 'c'){
+        cout<< "char c data type is "<< *(char*)data<< endl;
+    }
 }
