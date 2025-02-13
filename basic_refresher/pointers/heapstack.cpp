@@ -14,11 +14,14 @@ return 0;
 }
 
 int* digit(){
-    int num = 10;
-    int* ptr = &num; //
-    return ptr; // return address of num
+    int *num;
+    num = (int*)malloc(sizeof(int)); 
+    *num = 10; // assign value of num to dynamically allocated memory
+    return num; // return address of num
 }
 
 void display(){
-    int num = 20;
+    int num1;
+    num1 =20;
+    cout << "Value of num1 inside display function: " << num1 << endl; // value of num1 is changed because it is a local variable
 }
