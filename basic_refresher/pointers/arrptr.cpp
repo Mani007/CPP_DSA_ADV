@@ -13,3 +13,4 @@ for (int i = 0; i < 5; i++){
 return 0;
 }
 // Memory efficient array passing to a function by using pointer insted of passinf entire array
+// Also array pointer address makes it easier to deal with different types of arrays
