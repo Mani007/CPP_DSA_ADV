@@ -12,3 +12,4 @@ for (int i = 0; i < 5; i++){
 // cout << "Array pointers" << endl;
 return 0;
 }
+// Memory efficient array passing to a function by using pointer insted of passinf entire array
