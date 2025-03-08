@@ -5,6 +5,8 @@ using namespace std;
 int product(int a, int b=0) { // Function with default parameters, default parameters are always at the end
     return a * b;  // Inline function call
 }
+// Constant parameter in C++
+// void greet(const char *ch){} // constant character pointer of the function
 int main() {
     int a=4,b=5;
 //int *p=&a, *q=&b;
