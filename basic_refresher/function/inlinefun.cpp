@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-void greet(void); // function prototype
+void greet(); // function prototype - acceptable way
 int mul(int x, int y){  // x, y are formal parameters
     return x * y; 
 }
