@@ -1,17 +1,19 @@
 #include <iostream>
 using namespace std;
-void greet(); // function prototype - acceptable way
-int mul(int x, int y){  // x, y are formal parameters
-    return x * y; 
-}
+void swap(int,int);
 int main() {
+    int a=4,b=5;
 cout << "Inline functions" << endl;
-cout << "Inline functions call is " << mul(2,3) << endl;  // 2,3 are actual function parameters
-cout << "Inline functions" << endl;
-greet();
+cout << "Call by value and call by reff " << endl;  // 2,3 are actual function parameters
+cout << "Current value of a is "<< a << " and value of b is "<< b << endl;
+swap(a, b);
+cout << "NEW value of a is "<< a << " and value of b is "<< b << endl;
+
 return 0;
 }
-
-void greet(){
-    cout << "Hello, World!" << endl;
+void swap(int a,int b){
+    int temp =a;
+    a = b;
+    b = temp;
 }
+
