@@ -1,12 +1,7 @@
 #include <iostream>
 using namespace std;
 // Fuction accepting references as input
-int & swap(int &a,int &b){   // returning a reference variable
-    int temp =a;
-    a = b;
-    b = temp;
-    return a;
-}
+int & swap(int &a,int &b);
 int main() {
     int a=4,b=5;
 //int *p=&a, *q=&b;
@@ -19,5 +14,10 @@ int main() {
     cout << "NEW value of a is "<< a << " and value of b is "<< b << endl;
     return 0;
 }
-
+int & swap(int &a,int &b){   // returning a reference variable
+    int temp =a;
+    a = b;
+    b = temp;
+    return a;
+}
 
