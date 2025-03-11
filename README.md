@@ -90,4 +90,13 @@ Look for best books, blogs,interviews, Indian youtubers and profiles in codeforc
 3. Use [Exposed float and binary values](https://float.exposed/)
 ## Tutorials  
 1. Basics of pointers [Link](https://www.youtube.com/watch?v=MIL2BK02X8A)
-2. 
+
+# Basic concept of OOP in C++
+1. Absolute basic terms
+- Class - Basic template for creating objects. 
+- Objects - Basic runtime of classes 
+- Data abstraction and encapsulation - Wrapping data and function into single unit. 
+- Inheritance - Properties of one classes can be inherited to other classes. 
+- Polymorphism - Ability to take more than one form. 
+- Dynamic binding - compile and execution time creation and linking of objects
+- Message passing - Communication between objects. object.message(info). 
