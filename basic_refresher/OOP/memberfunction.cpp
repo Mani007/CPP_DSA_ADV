@@ -4,9 +4,10 @@ using namespace std;
 class BinaryReader{
     private:
         string s;
+        void chk_binary();
     public:
         void read_binary();
-        void chk_binary();
+        
         void onescomplement();
         void display();
 };
