@@ -26,7 +26,7 @@ void BinaryReader::chk_binary(){
 }
 
 void BinaryReader::onescomplement(){
-    chk_binary(); // Calling member function directly
+    chk_binary(); // Nesting of member functions
     for(int i=0; i<s.length(); i++){
         if(s[i]== '0' )
         {
