@@ -25,6 +25,7 @@ void BinaryReader::chk_binary(){
 }
 
 void BinaryReader::onescomplement(){
+    chk_binary(); // Calling member function directly
     for(int i=0; i<s.length(); i++){
         if(s[i]== '0' )
         {
@@ -50,7 +51,7 @@ int main() {
     //string s;
     BinaryReader br;
     br.read_binary();
-    br.chk_binary();
+    //br.chk_binary();
     br.onescomplement();
     br.display();
     return 0;
