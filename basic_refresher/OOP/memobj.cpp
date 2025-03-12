@@ -18,7 +18,7 @@ void Shop::setPrice(void){
     counter++;
 }
 void Shop::displayPrice(void){
-    for(int i; i<= counter;i++){
+    for(int i; i< counter;i++){
         cout<<"The price of item with id: "<<itemId[i]<<" is "<<itemPrice[i]<<endl;
     }
 }
