@@ -2,7 +2,7 @@
 using namespace std;
 class Employee {
     int id;
-    static int count; // Static member of the class
+    int count =0; // Without Static member of the class
     public:
         void setID(void) {
             cout<<"Enter the id of the employee "<< endl;
@@ -14,7 +14,7 @@ class Employee {
             cout<<"Total number of employees created is "<< count << endl;
         }
 };
-int Employee:: count; // Static variable of the class declared outside. Default value is zero. 
+//int Employee:: count; // Static variable of the class declared outside. Default value is zero. 
 int main() {
     cout << "Static variable in OOP" << endl;
     Employee emp1, emp2;
