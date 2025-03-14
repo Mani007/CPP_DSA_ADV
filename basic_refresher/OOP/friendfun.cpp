@@ -41,3 +41,9 @@ cout << "Understanding friend functions in CPP" << endl;
     
 return 0;
 }
+/*Properties of Friend function
+1. Its not a member of class but it has permission to access the private member.
+2. Can be invoked without help of object, but usually object are parameters
+3. It cannot access the member by name.
+4. It is not in the scope of the class 
+5. It cannot be called from abject of the class directly.*/
