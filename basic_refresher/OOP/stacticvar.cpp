@@ -15,6 +15,7 @@ class Employee {
             cout<<"Total number of employees created is "<< count << endl;
         }
         static void getCount(void){
+            //cout<<id;// This will not run as id is private ans non static variable in side a static member function
             cout<<"Total number of employees created is "<< count << endl;
         }
 };
