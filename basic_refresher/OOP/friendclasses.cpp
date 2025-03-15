@@ -16,8 +16,9 @@ class Calculator{
 
 class Complex {
     int a,b;
-    friend int Calculator::sumRealComplex(Complex o1,Complex o2); // Giving the class calculator member function acces to private variables.  
-    friend int Calculator::sumCompComplex(Complex o1,Complex o2); // Giving the class calculator member function acces to private variables.  
+    //friend int Calculator::sumRealComplex(Complex o1,Complex o2); // Giving the class calculator member function access to private variables.  
+    //friend int Calculator::sumCompComplex(Complex o1,Complex o2); // Giving the class calculator member function access to private variables.  
+    friend class Calculator; // Making the entire class as friend class
     public:
         void setData(int x,int y){
             a = x;
