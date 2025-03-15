@@ -7,6 +7,7 @@ class Calculator{
         return a+b;
     }
     int sumRealComplex(Complex , Complex );
+    int sumCompComplex(Complex , Complex );
     // This function will through an error at compile time. We need to define this function outside the class with scope resolution.
     // int sumRealComplex(Complex o1, Complex o2){ 
     //     return (o1.a+o2.a)
@@ -16,6 +17,7 @@ class Calculator{
 class Complex {
     int a,b;
     friend int Calculator::sumRealComplex(Complex o1,Complex o2); // Giving the class calculator member function acces to private variables.  
+    friend int Calculator::sumCompComplex(Complex o1,Complex o2); // Giving the class calculator member function acces to private variables.  
     public:
         void setData(int x,int y){
             a = x;
@@ -33,8 +35,11 @@ class Complex {
             cout <<"The Complex number SUM is "<< a << " + " << b << "i" << endl;
         }
 };
-int Calculator::sumRealComplex(Complex o1, Complex o2){ 
+int Calculator::sumRealComplex(Complex o1, Complex o2){  // We defined this function after declaring the complex class, and hence we declared the function outside the class.
     return (o1.a+o2.a);
+}
+int Calculator::sumCompComplex(Complex o1,Complex o2){ 
+    return (o1.b+o2.b);
 }
 int main() {
     cout << "Friend classes in CPP" << endl;
@@ -45,6 +50,7 @@ int main() {
     i2.displayComplex();
     Calculator calc;
     cout << "Sum of real part of two complex numbers: " << calc.sumRealComplex(i1,i2) << endl;
+    cout << "Sum of complex part of two complex numbers: " << calc.sumCompComplex(i1,i2) << endl;
     
     return 0;
 }
