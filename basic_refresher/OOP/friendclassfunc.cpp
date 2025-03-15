@@ -21,6 +21,11 @@ void addObj(X o1,Y o2){ // we need to declare it as a friend function to make it
     cout<< "The sum of data in object X and Y are "<< o1.data+o2.data<<endl;  // We cannot use it like this as data are private members of objects
 }
 int main() {
-cout << "More details on friend class" << endl;
+    cout << "More details on friend class" << endl;
+    X objX;
+    Y objY;
+    objX.setValue(5);
+    objY.setValue(10);
+    addObj(objX,objY); // Here, we can use addObj function as it is a friend of both X and Y classes.
 return 0;
 }
