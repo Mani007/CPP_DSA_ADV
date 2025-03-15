@@ -28,7 +28,7 @@ class Y{
 void addObj(X o1,Y o2){ // we need to declare it as a friend function to make it work.
     cout<< "The sum of data in object X and Y are "<< o1.data+o2.data<<endl;  // We cannot use it like this as data are private members of objects
 }
-void exchangeData(X &o1,Y &o2){ 
+void exchangeData(X &o1,Y &o2){   // Function using reference of objects
     int temp = o1.data;
     o1.data = o2.data;
     o2.data = temp;
