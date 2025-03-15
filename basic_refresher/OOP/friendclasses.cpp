@@ -37,6 +37,14 @@ int Calculator::sumRealComplex(Complex o1, Complex o2){
     return (o1.a+o2.a);
 }
 int main() {
-cout << "Friend classes in CPP" << endl;
-return 0;
+    cout << "Friend classes in CPP" << endl;
+    Complex i1,i2;
+    i1.setData(2,3);
+    i2.setData(3,2);
+    i1.displayComplex();
+    i2.displayComplex();
+    Calculator calc;
+    cout << "Sum of real part of two complex numbers: " << calc.sumRealComplex(i1,i2) << endl;
+    
+    return 0;
 }
