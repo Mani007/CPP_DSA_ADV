@@ -1,10 +1,11 @@
 #include <iostream>
 using namespace std;
-int count=0;
+
 class Number{
     int value;
     
     public:
+    static int count;
     Number(){}; // Generalized constructor
     Number(int v){
         value = v;
