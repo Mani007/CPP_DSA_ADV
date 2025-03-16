@@ -4,6 +4,7 @@ class Bankdeposit{
     int principle,year;
     float rate,amount;
     public:
+    Bankdeposit(){} // Generalized constructor in case you want to initialize your object later.
     Bankdeposit(int p, int y, float r=0.04){
         principle = p;
         year = y;
