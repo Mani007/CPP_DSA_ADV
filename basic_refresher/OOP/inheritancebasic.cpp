@@ -31,7 +31,7 @@ class Employee {
 // private inheritance = base class public member will become private member of derived class. Default visiblity mode is private.
 // Private members are never inherited
 // Creating a manager derived class
-class Manager: public Employee{
+class Manager: private Employee{
     int department_no;
     public:
         Manager(){}; // Generalized constructor helps in inheritance  // If we don't provide any constructor, compiler will provide a default constructor.
@@ -53,10 +53,10 @@ int main() {
     em2.displayEmployeeDetails();
     Manager m1(1,5000.0,10); // Constructor of manager class with employee constructor is inherited and called by manager class
     Manager m2; // Manager class useing generalized constructor
-    m1.displayEmployeeDetails(); // Calls displayEmployeeDetails from Employee class
+    //m1.displayEmployeeDetails(); // this method cannot be called from Employee class as we have made it private call
     m1.diaplayManager(); // Calls diaplayManager from Manager class
     m2 = Manager(3,4500.0,20); // Creating object using different constructor method later in the program.
-    m2.displayEmployeeDetails();
+    //m2.displayEmployeeDetails();  // This cannot be called in private mode
     m2.diaplayManager(); // Calls diaplayManager from Manager class
     return 0;
 }
