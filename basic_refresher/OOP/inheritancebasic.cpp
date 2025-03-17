@@ -13,10 +13,10 @@ class Employee {
     float salary;
     public:
         //Employee(){}; // Generalized constructor 
-        Employee(int id, float salary){ // Constructor
+        Employee(int your_id, float your_salary){ // Constructor
             // Make sure to use different names for class variable and local variables
-            id = id;
-            salary = salary;
+            id = your_id;
+            salary = your_salary;
         }
         void displayEmployeeDetails(void){
             cout << "Employee id: " << id << ", Salary: " << salary << endl;
@@ -33,9 +33,9 @@ class Employee {
 // };
 int main() {
     cout << "Inheritance Basic CPP" << endl;
-    Employee emp1(7,2.5);
-    //Employee em2(2,3000.0);
+    Employee emp1(7,2000.0);
+    Employee em2(2,3000.0);
     emp1.displayEmployeeDetails();
-    //em2.displayEmployeeDetails();
+    em2.displayEmployeeDetails();
     return 0;
 }
