@@ -48,6 +48,8 @@ void Result::displayResult(void) {
 }
 int main() {
 cout << "Multilevel inheritance" << endl;
+// Student --> Exam --> Result is the inheritance path
+// Use static code analysis tools to visualize the class inheritance call graph
     Result stu1;
     stu1.set_roll_no(1);
     stu1.setMark(80, 90);
