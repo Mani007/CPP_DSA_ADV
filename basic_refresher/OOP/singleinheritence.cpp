@@ -21,7 +21,7 @@ int Base::getData1(){
 int Base::getData2(){
     return data2;
 }
-class Derived: private Base{ // class is derived public from Base class
+class Derived: public Base{ // class is derived public from Base class
     int data3;
     public:
         void processData(void);
@@ -39,7 +39,7 @@ void Derived::display(void){
 int main() {
     cout << "Single inheritance" << endl;
     Derived der;
-    der.setData(); // Now we cannot call this method here because we made our inheritance private.
+    der.setData(); // Yes we call call all the public method from the derived class to base class. This method will set value of data1 and data2
     der.processData(); // This function is called from derived class only
     der.display(); // This function is called from derived class only
 return 0;
