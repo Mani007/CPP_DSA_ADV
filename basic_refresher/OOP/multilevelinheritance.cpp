@@ -29,7 +29,7 @@ void Exam::setMark(float mat,float sci) {
 }
 
 void Exam::displayMarks(void) {
-    cout << "The makrs of "<< roll_no <<"is "<<"Maths: " << math << ", Science: " << science << endl;
+    cout << "The makrs of "<< roll_no <<" is "<<"Maths: " << math << ", Science: " << science << endl;
 }
 
 class Result: public Exam{
@@ -48,5 +48,14 @@ void Result::displayResult(void) {
 }
 int main() {
 cout << "Multilevel inheritance" << endl;
+    Result stu1;
+    stu1.set_roll_no(1);
+    stu1.setMark(80, 90);
+    stu1.display_roll_no();
+    stu1.displayMarks();
+
+    stu1.calculatePercentage();
+    stu1.displayResult();
+
 return 0;
 }
