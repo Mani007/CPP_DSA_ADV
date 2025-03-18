@@ -21,7 +21,7 @@ int Base::getData1(){
 int Base::getData2(){
     return data2;
 }
-class Derived: public Base{ // class is derived public from Base class
+class Derived: private Base{ // class is derived public from Base class
     int data3;
     public:
         void processData(void);
@@ -29,6 +29,7 @@ class Derived: public Base{ // class is derived public from Base class
 
 };
 void Derived::processData(void){
+    setData();
     data3 = data2 * getData1();
 }
 void Derived::display(void){
@@ -39,7 +40,7 @@ void Derived::display(void){
 int main() {
     cout << "Single inheritance" << endl;
     Derived der;
-    der.setData(); // Yes we call call all the public method from the derived class to base class. This method will set value of data1 and data2
+    //der.setData(); // We do not need this as we have set the data in process function
     der.processData(); // This function is called from derived class only
     der.display(); // This function is called from derived class only
 return 0;
