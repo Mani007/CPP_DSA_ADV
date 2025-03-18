@@ -15,7 +15,7 @@ In protected inheritance, the protected members of the base class are accessible
 2. protected      protected           private             protected
 3. public         public              private             protected
 */
-class Derived: protected Base{
+class Derived: public Base{
     public:
     int z;
 };
@@ -23,7 +23,7 @@ int main() {
 cout << "Protected inheritance" << endl;
     Derived d;
     //d.a = 10; //Not Allowed since "a" private and is protected in Derived class.
-    d.b = 20; //Not Allowed since "b" is protected and is protected in Base class.
+    d.b = 20; //Not Allowed since "b" is protected and is public in Base class.
     d.z = 30; //Allowed since "z" is public and is accessible in Derived class.
     
 return 0;
