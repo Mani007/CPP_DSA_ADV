@@ -13,8 +13,9 @@ class Complex{
 };
 int main() {
     cout << "Class pointers and arrow operator" << endl;
-    Complex c1(2,5);
-    Complex *cptr = &c1;
+    //Complex c1(2,5);
+    //Complex *cptr = &c1;
+    Complex *cptr = new Complex(2,5); // another way of creating object
     (*cptr).display(); // using pointer dereference for pointer
     //cptr->display(); // using arrow operator for pointer
     cout << "Complex c1 address is by pointer cptr is "<< cptr << endl;
