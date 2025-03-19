@@ -21,15 +21,14 @@ class Point {
 class Test{
     int a, b;
     public:
-    Test(int i, int j) :  b(a+j), a(j){ // This will create problem due to order of declarations
+    Test(int a=2, int b=3) : a(a) {
         cout << "Test constructor called with (" << a << ", " << b << ")" << endl;
-        cout<< "a = " << a << ", b = " << b << b;
     }
 };
 int main() {
 cout << "Initialization of list in C++" << endl;
 
-Test obj(5,6); // Test constructor called with (10, 20)
+Test obj(10, 20); // Test constructor called with (10, 20)
 
 return 0;
 }
