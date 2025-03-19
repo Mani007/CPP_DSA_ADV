@@ -24,5 +24,7 @@ int main() {
     Base2 base2obj;
     base1obj.greet();
     base2obj.greet();
+    Derived derivedObj;
+    derivedObj.greet(); // Ambiguity resolved by MRO (Method Resolution Order)
 return 0;
 }
