@@ -21,14 +21,15 @@ class Point {
 class Test{
     int a, b;
     public:
-    Test(int a=0, int b=0) : a(a), b(b) {
+    Test(int a, int b) : a(a), b(a+b) {
         cout << "Test constructor called with (" << a << ", " << b << ")" << endl;
+        cout<< "a = " << a << ", b = " << b << b;
     }
 };
 int main() {
 cout << "Initialization of list in C++" << endl;
 
-Test obj(10, 20); // Test constructor called with (10, 20)
+Test obj(5,6); // Test constructor called with (10, 20)
 
 return 0;
 }
