@@ -14,6 +14,10 @@ class Complex{
 int main() {
     cout << "Class pointers and arrow operator" << endl;
     Complex c1(2,5);
-    c1.display();
+    Complex *cptr = &c1;
+    (*cptr).display(); // using pointer dereference for pointer
+    //cptr->display(); // using arrow operator for pointer
+    cout << "Complex c1 address is by pointer cptr is "<< cptr << endl;
+    //c1.display();
 return 0;
 }
