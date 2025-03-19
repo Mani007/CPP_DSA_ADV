@@ -21,7 +21,7 @@ class Point {
 class Test{
     int a, b;
     public:
-    Test(int i, int j) : a(i), b(a+j) {
+    Test(int i, int j) :  b(a+j), a(j){ // This will create problem due to order of declarations
         cout << "Test constructor called with (" << a << ", " << b << ")" << endl;
         cout<< "a = " << a << ", b = " << b << b;
     }
