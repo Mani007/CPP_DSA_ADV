@@ -17,6 +17,10 @@ class Base2{
 
 class Derived : public Base1, public Base2{
     int a;
+    public:
+    void greet(void){ // Ambiguity resolution
+        Base1::greet(); // This will call the greet() from Base1
+    }
 };
 int main() {
     cout << "Ambiguity in C++ inheritance" << endl;
