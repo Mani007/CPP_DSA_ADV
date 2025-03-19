@@ -16,8 +16,8 @@ int main() {
     //Complex c1(2,5);
     //Complex *cptr = &c1;
     Complex *cptr = new Complex(2,5); // another way of creating object
-    (*cptr).display(); // using pointer dereference for pointer
-    //cptr->display(); // using arrow operator for pointer
+    //(*cptr).display(); // using pointer dereference for pointer
+    cptr->display(); // using arrow operator for pointer
     cout << "Complex c1 address is by pointer cptr is "<< cptr << endl;
     //c1.display();
 return 0;
