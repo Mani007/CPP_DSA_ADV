@@ -19,11 +19,11 @@ class Base2{
     public:
     Base2(int a){
         num2 = a;
-        cout << "Base1 constructor called with value: " << num2 << endl;
+        cout << "Base2 constructor called with value: " << num2 << endl;
     }
 };
 
-class Derived: public Base1, public Base2{
+class Derived: public Base2, public Base1{
      protected:
     int num3;
     public:
