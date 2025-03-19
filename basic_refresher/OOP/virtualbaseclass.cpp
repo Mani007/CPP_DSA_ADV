@@ -16,7 +16,7 @@ class Student{
         cout << "your Roll No: " << roll_no << endl;
     }
 };
-class Test:  public Student{
+class Test: virtual public Student{
     protected:
     float phy,math;
     public:
@@ -28,7 +28,7 @@ class Test:  public Student{
         cout << "Physics: " << phy << ", Mathematics: " << math << endl;
     }
 };
-class Sport:  public Student{
+class Sport: virtual public Student{
     protected:
     float score;
     public:
@@ -58,6 +58,6 @@ cout << "Virtual base class" << endl;
     res.setmarks(78, 90);
     res.setscore(80);
     res.displayres();
-
+    
 return 0;
 }
