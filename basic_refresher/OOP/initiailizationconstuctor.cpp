@@ -21,7 +21,7 @@ class Point {
 class Test{
     int a, b;
     public:
-    Test(int a, int b) : a(a), b(a+b) {
+    Test(int i, int j) : a(i), b(a+j) {
         cout << "Test constructor called with (" << a << ", " << b << ")" << endl;
         cout<< "a = " << a << ", b = " << b << b;
     }
