@@ -23,10 +23,10 @@ class Derived : public Base1, public Base2{
     }
 };
 class Derived1: public Base1{ // single inheritance
-    public:
-    void greet(void){ // Ambiguity overriding in derived class
-        cout << "Hello from Derived1" << endl;
-    }
+    int z;
+    // void greet(void){ // Ambiguity overriding in derived class
+    //     cout << "Hello from Derived1" << endl;
+    // }
 };
 int main() {
     cout << "Ambiguity in C++ inheritance" << endl;

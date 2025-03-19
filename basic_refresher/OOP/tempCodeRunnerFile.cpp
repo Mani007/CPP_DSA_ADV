@@ -1,4 +1,3 @@
-class Manager: public Employee{
-//     int department;
-//     public:
-// };
+void greet(void){ // Ambiguity overriding in derived class
+    //     cout << "Hello from Derived1" << endl;
+    // }
