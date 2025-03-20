@@ -3,7 +3,12 @@ using namespace std;
 class Complex{
     int real, imaginary;
     public:
+    Complex(){}; // Generalized constructor
     Complex(int r, int i) {
+        real = r;
+        imaginary = i;
+    }
+    void setData(int r, int i){
         real = r;
         imaginary = i;
     }
