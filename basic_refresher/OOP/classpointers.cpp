@@ -24,11 +24,12 @@ int main() {
     //(*cptr).display(); // using pointer dereference for pointer
     //cptr->display(); // using arrow operator for pointer
     for (int i = 0; i < 5; i++){
-        cptr[i].setData(i,i+1);
-        cptr[i].display();
+        cptr->setData(i,i+1);
+        cptr->display();
+        cptr++; // incrementing pointer to next object
     }
     //cptr->display(); // using arrow operator for pointer
-    cout << "Complex c1 address is by pointer cptr is "<< cptr << endl;
+    cout << "Complex array address is by pointer cptr is "<< cptr << endl;
     //c1.display();
     delete [] cptr; // to avoid memory leakage
 
