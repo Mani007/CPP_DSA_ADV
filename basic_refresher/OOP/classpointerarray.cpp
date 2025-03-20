@@ -27,8 +27,8 @@ cout << "Class pointer to the array of object" << endl;
     for(int i; i<size; i++) {
     cout<<"Enter the id and price for shop: "<<i+1<<endl;
     cin>>p>>q;
-        shopArray[i].setData(p, q);
-        shopArray[i].getData();
+        shopArray->setData(p, q);
+        shopArray->getData();
     }
     // delete[] shopArray; // de-allocate memory
     
