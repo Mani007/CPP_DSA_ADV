@@ -19,8 +19,9 @@ cout << "Class pointer to the array of object" << endl;
     // shopArray[0].getData();
     // shopArray[1].getData();
     for(int i=0; i<size; i++) {
-        shopArray[i].setData(i+1, i*100);
-        shopArray[i].getData();
+        shopArray->setData(i+1, i*100);
+        shopArray->getData();
+        shopArray++; // increment the pointer to the next object in the array
     }
     delete[] shopArray; // de-allocate memory
     
