@@ -4,7 +4,7 @@ class A{
     int a;
     public:
     void setData(int a){  // we cannot declare the variable name same as class variable. To make this work we need to use "this" pointer  
-        a=a;
+        this->a=a; // "this" is a class self referential pointer
     }
     void getData(void){
         cout<<"The value of a is "<<a<<endl;
