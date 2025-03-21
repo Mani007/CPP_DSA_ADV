@@ -13,6 +13,7 @@ int main() {
 cout << "Class pointer to the array of object" << endl;
     int size=3;
     Shop* shopArray = new Shop[size]; // dynamic memory allocation
+    Shop* tempArray = shopArray; // storing initial value of the pointer Very inportant
     //Shop shopArray[size];
     // shopArray[0].setData(1, 500);
     // shopArray[1].setData(2, 700);
@@ -28,7 +29,11 @@ cout << "Class pointer to the array of object" << endl;
     cout<<"Enter the id and price for shop: "<<i+1<<endl;
     cin>>p>>q;
         shopArray->setData(p, q);
-        shopArray->getData();
+        shopArray++;
+    }
+    for(int i;i<size;i++){
+        tempArray->getData();
+        tempArray++; // increment the pointer to the next object in the array
     }
     // delete[] shopArray; // de-allocate memory
     
