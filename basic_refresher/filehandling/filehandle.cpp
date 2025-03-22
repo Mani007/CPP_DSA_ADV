@@ -33,12 +33,17 @@ int main() {
     // outfile.close();
     //readfile.close();
     // Writing user name inside a file
-    string name;
-    cout<<"Enter youm name \n"<<endl;
-    cin>>name;
-    ofstream outfile("sample.txt"); // for write operation
-    outfile<<name<<endl;
-    outfile.close();
+    // string name;
+    // cout<<"Enter youm name \n"<<endl;
+    // cin>>name;
+    // ofstream outfile("sample.txt"); // for write operation
+    // outfile<<name<<endl;
+    // outfile.close(); // the connection stream is closed to this file
+    string content;
+    ifstream infile("sample.txt");
+    getline(infile,content);
+    cout<<content<<endl;
+    infile.close(); // the connection stream is closed to this file
     
 return 0;
 }
