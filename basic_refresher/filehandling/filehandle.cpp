@@ -45,14 +45,22 @@ int main() {
     // cout<<content<<endl;
     // infile.close(); // the connection stream is closed to this file
     // Now file handling using object not the constructor
-    ofstream myfile;
-    myfile.open("sample.txt");
+    // ofstream myfile;
+    // myfile.open("sample.txt");
+    // if (myfile.is_open()) {
+    //     myfile << "1. Sample text to be written in the file.\n";
+    //     myfile << "2. Sample text to be written in the file.\n";
+    //     myfile << "3. Sample text to be written in the file.\n";
+    //     myfile.close();
+    // } else cout << "Unable to open file";
+     // reading multiple lines using while loop
+     ifstream myfile("sample.txt");
+    string line;
     if (myfile.is_open()) {
-        myfile << "1. Sample text to be written in the file.\n";
-        myfile << "2. Sample text to be written in the file.\n";
-        myfile << "3. Sample text to be written in the file.\n";
+        while ( getline (myfile,line) ) {
+            cout << line << '\n';
+        }
         myfile.close();
-    } else cout << "Unable to open file";
-     
+    }
 return 0;
 }
