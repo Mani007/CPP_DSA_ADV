@@ -3,11 +3,11 @@
 using namespace std;
 class Rating{
     protected:
-    char title[30];
+    string title;
     float rating;
     public:
-    Rating(char* t, float r){
-        strcpy(title, t);
+    Rating(string t, float r){
+        title = t;
         rating = r;
     }
     virtual void display(){
@@ -18,7 +18,7 @@ class Rating{
 class MovieRating: public Rating{
     int length;
     public:
-    MovieRating(char* t, float r,int l):Rating(t, r){
+    MovieRating(string t, float r,int l):Rating(t, r){
         // Constructor for MovieRating class
         length = l;    
     }
@@ -30,7 +30,7 @@ class MovieRating: public Rating{
 class SeriesRating: public Rating{
     int episode;
     public:
-    SeriesRating(char* t, float r,int e):Rating(t, r){
+    SeriesRating(string t, float r,int e):Rating(t, r){
         // Constructor for SeriesRating class 
         episode = e;   
     }
@@ -47,11 +47,8 @@ int main() {
     // A class cannot have a virtual constructor or destructor.
     // Virtual functions can be called using a pointer or a reference to the base class.
     Rating* ptr;
-    char *name = new char[30];
-    name = "Inception";
-    MovieRating movie(name, 8.9, 150);
-    name = "Game of Thrones";
-    SeriesRating series(name, 9.3, 85);
+    MovieRating movie("Inception", 8.9, 150);
+    SeriesRating series("Game of Thrones", 9.3, 85);
     ptr = &movie;
     ptr->display(); // Calls the display() function of MovieRating class
     ptr = &series;
