@@ -48,7 +48,9 @@ int main() {
     ofstream myfile;
     myfile.open("sample.txt");
     if (myfile.is_open()) {
-        myfile << "Sample text to be written in the file.\n";
+        myfile << "1. Sample text to be written in the file.\n";
+        myfile << "2. Sample text to be written in the file.\n";
+        myfile << "3. Sample text to be written in the file.\n";
         myfile.close();
     } else cout << "Unable to open file";
      
