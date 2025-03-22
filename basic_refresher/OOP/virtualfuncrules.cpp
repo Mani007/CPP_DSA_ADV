@@ -47,8 +47,11 @@ int main() {
     // A class cannot have a virtual constructor or destructor.
     // Virtual functions can be called using a pointer or a reference to the base class.
     Rating* ptr;
-    MovieRating movie("Inception", 8.9, 150);
-    SeriesRating series("Game of Thrones", 9.3, 85);
+    char *name = new char[30];
+    name = "Inception";
+    MovieRating movie(name, 8.9, 150);
+    name = "Game of Thrones";
+    SeriesRating series(name, 9.3, 85);
     ptr = &movie;
     ptr->display(); // Calls the display() function of MovieRating class
     ptr = &series;
