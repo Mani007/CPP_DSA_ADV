@@ -10,7 +10,7 @@ class Rating{
         title = t;
         rating = r;
     }
-     void display(){
+    virtual void display(){
         cout << "Title: " << title << ", Rating: " << rating << endl;
     }
 };
@@ -45,6 +45,10 @@ int main() {
     // A class can have multiple virtual functions but only one non-virtual function.
     // Virtual functions can be overridden using the "override" and "final" keywords.
     // A class cannot have a virtual constructor or destructor.
+    // A virtual function cannot be static function
+    // A virtual function is accessed by object pointers
+    // A virtual function can be friend of another class
+    // A virtual function may not be used in the derived class.
     // Virtual functions can be called using a pointer or a reference to the base class.
     Rating* ptr[2];
     MovieRating movie("Inception", 8.9, 150);
