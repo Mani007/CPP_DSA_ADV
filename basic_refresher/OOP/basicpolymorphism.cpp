@@ -13,7 +13,7 @@ class BaseClass{
     public:
     int var_base;
     void display(){
-        cout << "Base class display"<<"var_base value is"<<var_base << endl;
+        cout << "Base class display "<<" var_base value is "<<var_base << endl;
     }
 };
 
@@ -31,5 +31,6 @@ int main() {
     BaseClass obj_base;
     DerivedClass obj_derived;
     ptr = &obj_derived; // We are pointing base class pointer to derived class object
+    ptr->display(); // Polymorphism in action, ptr although referring to derived class but run the display function from the base class due to base class pointer
 return 0;
 }
