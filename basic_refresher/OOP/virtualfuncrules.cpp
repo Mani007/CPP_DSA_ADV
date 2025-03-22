@@ -46,13 +46,16 @@ int main() {
     // Virtual functions can be overridden using the "override" and "final" keywords.
     // A class cannot have a virtual constructor or destructor.
     // Virtual functions can be called using a pointer or a reference to the base class.
-    Rating* ptr;
+    Rating* ptr[2];
     MovieRating movie("Inception", 8.9, 150);
     SeriesRating series("Game of Thrones", 9.3, 85);
-    ptr = &movie;
-    ptr->display(); // Calls the display() function of MovieRating class
-    ptr = &series;
-    ptr->display(); // Calls the display() function of SeriesRating class
-    
+    // ptr = &movie;
+    // ptr->display(); // Calls the display() function of MovieRating class
+    // ptr = &series;
+    // ptr->display(); // Calls the display() function of SeriesRating class
+    ptr[0] = &movie;
+    ptr[1] = &series;
+    ptr[0]->display(); // Calls the display() function of MovieRating object
+    ptr[1]->display(); // Calls the display() function of SeriesRating object
 return 0;
 }
