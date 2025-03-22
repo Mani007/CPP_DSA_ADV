@@ -26,8 +26,8 @@ int main() {
     ifstream readfile("sample.txt");
     //readfile>>r;
     //cout<<r<<endl;
-    getline(readfile, r);
-    getline(readfile, r);
+    getline(readfile, r); // display one entire line from the file
+    // getline(readfile, r);
     cout<<r<<endl;
     // closing file
     // outfile.close();
