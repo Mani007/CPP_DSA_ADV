@@ -57,7 +57,8 @@ int main() {
      ifstream myfile("sample.txt");
     string line;
     if (myfile.is_open()) {
-        while ( getline (myfile,line) ) {
+        while ( myfile.eof() ==0 ) {
+            getline (myfile,line);
             cout << line << '\n';
         }
         myfile.close();
