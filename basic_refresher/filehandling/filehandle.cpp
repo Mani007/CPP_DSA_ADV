@@ -1,6 +1,7 @@
 // This required understanding of OOP
 #include <iostream>
 #include <fstream>
+#include <cstring>
 using namespace std;
 /*
 Useful class in fstream for file handling in C++ are 
@@ -16,6 +17,8 @@ We can open a file using two methods
 */
 int main() {
     cout << "File handling in C++" << endl;
-    ofstream("sample.txt");
+    string s=" Some random code... ";
+    ofstream outfile("sample.txt"); // for write operation
+    outfile<<s<<endl;
 return 0;
 }
