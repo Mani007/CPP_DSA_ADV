@@ -18,7 +18,17 @@ We can open a file using two methods
 int main() {
     cout << "File handling in C++" << endl;
     string s=" Some random code... ";
-    ofstream outfile("sample.txt"); // for write operation
-    outfile<<s<<endl;
+    string r;
+    // opening files using constructor and writing on it.
+    // ofstream outfile("sample.txt"); // for write operation
+    // outfile<<s<<endl;
+    // opening file using constructor and reading from it.
+    ifstream readfile("sample.txt");
+    readfile>>r;
+    cout<<r<<endl;
+    // closing file
+    // outfile.close();
+    readfile.close();
+    
 return 0;
 }
