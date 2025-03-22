@@ -31,6 +31,9 @@ int main() {
     BaseClass obj_base;
     DerivedClass obj_derived;
     ptr = &obj_derived; // We are pointing base class pointer to derived class object
+    // late binding
+    ptr->var_base = 100; // accessing base class member var_base using base class pointer referring to derived class
+    //ptr->var_derived = 100; // Not allowed accessing derived class member var_derived using base class pointer referring to derived class 
     ptr->display(); // Polymorphism in action, ptr although referring to derived class but run the display function from the base class due to base class pointer
 return 0;
 }
