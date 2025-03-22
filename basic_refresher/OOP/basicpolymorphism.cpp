@@ -21,7 +21,7 @@ class DerivedClass: public BaseClass{
     public:
     int var_derived;
     void display(){
-        cout << "FROM THE DERIVED CLASS Base class display"<<"var_base value is"<<var_base << endl;
+        cout << "FROM THE DERIVED CLASS Base class display"<<"var_base value is "<<var_base << endl;
         cout << "Derived class display" << ", var_derived value is "<<var_derived << endl;
     }
 };
@@ -34,6 +34,11 @@ int main() {
     // late binding
     ptr->var_base = 100; // accessing base class member var_base using base class pointer referring to derived class
     //ptr->var_derived = 100; // Not allowed accessing derived class member var_derived using base class pointer referring to derived class 
-    ptr->display(); // Polymorphism in action, ptr although referring to derived class but run the display function from the base class due to base class pointer
-return 0;
+    //ptr->display(); // Polymorphism in action, ptr although referring to derived class but run the display function from the base class due to base class pointer
+    DerivedClass *der; // derived class pointer
+    der = &obj_derived;
+    der->var_derived=34; // putting var_derived in derived class using derived class pointer
+    der->display(); // Polymorphism in action, der although referring to derived class and run the display function from the derived class due to derived class pointer
+
+    return 0;
 }
