@@ -10,7 +10,7 @@ class Rating{
         title = t;
         rating = r;
     }
-    virtual void display(){
+     void display(){
         cout << "Title: " << title << ", Rating: " << rating << endl;
     }
 };
