@@ -3,7 +3,7 @@ using namespace std;
 class BaseClass{
     public:
     int var_base;
-    void display(){
+    virtual void display(){ // making function virtual such that if derived class reference pointer (pointing to base class) calls for display then run the display function in derived class only. Virtual function donates their priority.
         cout << "Base class display "<<" var_base value is "<<var_base << endl;
     }
 };
