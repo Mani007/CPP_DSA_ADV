@@ -1,1 +1,1 @@
-abc
+Sample text to be written in the file.
