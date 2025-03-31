@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+// class template with multiple parameters
 template <class T1,class T2>
 class Base{
     T1 a;
