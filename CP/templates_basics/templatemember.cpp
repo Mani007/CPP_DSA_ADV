@@ -7,10 +7,13 @@ class Base{
         Base(T d){
             data = d;
         }
-        void show(){
-            cout << "The value using show function is: " << data << endl;
-        }
+        void show(); // function declaration 
 };
+// function definitions
+template <class T>
+void Base<T>::show(){
+    cout << "The value using show function is: " << data << endl;
+}
 int main() {
 cout << "Member function and overloading of template function" << endl;
     Base<int> obj1(10);
