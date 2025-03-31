@@ -10,7 +10,7 @@ class Base{
         void show(); // function declaration 
 };
 // function definitions
-template <class T>
+template <class T>  // We are required to pass this template as well
 void Base<T>::show(){
     cout << "The value using show function is: " << data << endl;
 }
