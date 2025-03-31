@@ -28,16 +28,28 @@ class Vector1{
 int main() {
 cout << "Templates in CPP" << endl;
 
-    Vector1 <int>v1(3);
-    //v1->arr =12; // We cannot use this as we do not have pointer for the object as we have not allocated memory using new keyword syntax. ERROR: has non-pointer type vector1
-    v1.arr[0] = 1;
-    v1.arr[1] = 2;
-    v1.arr[2] = 3;
+    // Vector1 <int>v1(3);
+    // //v1->arr =12; // We cannot use this as we do not have pointer for the object as we have not allocated memory using new keyword syntax. ERROR: has non-pointer type vector1
+    // v1.arr[0] = 1;
+    // v1.arr[1] = 2;
+    // v1.arr[2] = 3;
 
-    Vector1 <int>v2(3);
-    v2.arr[0] = 4;
-    v2.arr[1] = 5;
-    v2.arr[2] = 6;
+    // Vector1 <int>v2(3);
+    // v2.arr[0] = 4;
+    // v2.arr[1] = 5;
+    // v2.arr[2] = 6;
+    // cout << "Sum of vectors v1 and v2: " << v1.sum(v2) << endl;
+    // cout << "Dot product of vectors v1 and v2: " << v1.dotproduct(v2) << endl;
+    Vector1 <float>v1(3);
+    //v1->arr =12; // We cannot use this as we do not have pointer for the object as we have not allocated memory using new keyword syntax. ERROR: has non-pointer type vector1
+    v1.arr[0] = 1.4;
+    v1.arr[1] = 2.5;
+    v1.arr[2] = 3.7;
+
+    Vector1 <float>v2(3);
+    v2.arr[0] = 4.2;
+    v2.arr[1] = 5.9;
+    v2.arr[2] = 6.6;
     cout << "Sum of vectors v1 and v2: " << v1.sum(v2) << endl;
     cout << "Dot product of vectors v1 and v2: " << v1.dotproduct(v2) << endl;
     
