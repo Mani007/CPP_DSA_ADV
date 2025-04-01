@@ -38,7 +38,10 @@ int main() {
     //     it1++;
     //     it2++;
     // }
-    //displaylistint(l1);
+    list<int> :: iterator iter1 = l1.end();
+    iter1++;
+    l1.insert(iter1, 40);
+    displaylistint(l1);
     displaylistchar(l2);
 return 0;
 }
