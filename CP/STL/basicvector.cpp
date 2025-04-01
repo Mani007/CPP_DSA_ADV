@@ -11,9 +11,14 @@ int main() {
     cout << "Basics of Vectors" << endl;
     vector<int> vi; // declaration of an empty vector of integers
     int element; 
-    for (int i = 0; i < 5; i++)
+    int size;
+    cout << "Enter size of vector: ";
+    cin >> size;
+    for (int i = 0; i < size; i++)
     {
         /* code */
+        // taking input from user for each element in vector
+        // index starts from 0 in vector in C++
         cout << "Enter element at "<<i+1<<" : ";  // asking user to input elements
         cin >> element;  // user input for vector elements
         vi.push_back(element); // adding elements to the vector
