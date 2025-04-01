@@ -10,10 +10,14 @@ void display(vector<int> &v){
 int main() {
     cout << "Basics of Vectors" << endl;
     vector<int> vi; // declaration of an empty vector of integers
+    int element; 
     for (int i = 0; i < 5; i++)
     {
         /* code */
-        vi.push_back(i); // adding elements to the vector
+        cout << "Enter element at "<<i+1<<" : ";  // asking user to input elements
+        cin >> element;  // user input for vector elements
+        vi.push_back(element); // adding elements to the vector
+
     }
     display(vi); //
     
