@@ -2,10 +2,19 @@
 #include <list>
 using namespace std;
 // Linked list are non contiguous block of memory 
-template <class T>
-void displaylist(list<T> &lst){
+//template <class T>
+void displaylistint(list<int> &lst){
     cout<<"display started here"<<endl;
-    list<T> :: iterator it ;
+    list<int> :: iterator it ;
+    for (it=lst.begin(); it != lst.end(); it++){
+        cout <<"The value of  " <<" is "<< *it << " "<<endl;
+    }
+    cout<<"display ended here"<<endl;
+    // lst.clear(); // To delete all elements in the list.
+}
+void displaylistchar(list<char> &lst){
+    cout<<"display started here"<<endl;
+    list<char> :: iterator it ;
     for (it=lst.begin(); it != lst.end(); it++){
         cout <<"The value of  " <<" is "<< *it << " "<<endl;
     }
@@ -29,7 +38,7 @@ int main() {
     //     it1++;
     //     it2++;
     // }
-    displaylist(l1);
-    //displaylist(l2);
+    //displaylistint(l1);
+    displaylistchar(l2);
 return 0;
 }
