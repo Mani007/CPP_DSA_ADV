@@ -45,6 +45,7 @@ int main() {
     l1.pop_back();
     l1.pop_back();
     displaylistint(l1);
+    l2.remove('b');
     displaylistchar(l2);
 return 0;
 }
