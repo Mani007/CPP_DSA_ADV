@@ -1,0 +1,2 @@
+# Modern C++ 
+Its important to get used to new syntax and paradigm from the latest updates of C++ programming language. Mostly these updates are often influenced by other programming languages such as python or JS. For example, in python we have lambda functions something similar is possible in C++ using special type functors now. Another great example would be arrow/anonymous functions in JS we can also do something similar in C++ now. So it become vital to list all the modern syntax and implementation in C++. Some of these new features are listed below.   

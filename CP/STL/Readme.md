@@ -7,7 +7,7 @@ STL has the following components.
 1. Containers - This stores data such as array,vectors etc.    
 2. Algorithms - This provide reusable algorithms/functions on containers such as swap,sorting,searching copying etc.   
 3. Iterators - It is a Object that points to an element in the container. It is handled just like a pointer. IT CONNECTS ALGORITHM WITH CONTAINERS.   
-4. Functors    
+4. Functors - Function as an object, similar to decorator in python 
 
 ### Containers
 1. Sequence containers - Linear data storage such as array or vector or list or dqueue    
