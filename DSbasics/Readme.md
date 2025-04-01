@@ -1,0 +1,2 @@
+# Data Structures - Basic data structure  
+Here we ill have implementation of all the basic data structures such as array, stacks, queue, linked list etc. from scratch in C/C++. We only have basic implementation along with the basic functionality of these data structures. In DSA we will use these data structures directly using STL to solve real world problems by implementing algorithms.   
