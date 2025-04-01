@@ -12,6 +12,7 @@ cout << "Maps STL in C++" << endl;
     marks["Bob"] = 78;
     marks["Charlie"] = 88;
     marks["David"] = 95;
+    marks.insert({{"jj",55},{"yy",72}});
     map<string,int> :: iterator iter; // iterator of map type
     // print all key-value pairs in map
     for (iter=marks.begin(); iter!=marks.end();iter++){
