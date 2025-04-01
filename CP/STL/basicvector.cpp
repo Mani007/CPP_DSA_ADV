@@ -25,6 +25,9 @@ int main() {
 
     }
     display(vi); //
+    vector<int> :: iterator iter = vi.begin(); // creating iterator and resolving scope. template<type> scope-resolved to create iterator iter assigned ref at begining of vector 
+    vi.insert(iter,33);  // iter is pointer to vi at the begining
+    display(vi); //
     
     
 return 0;
