@@ -42,6 +42,8 @@ int main() {
     //list<int> :: iterator iter2 = l1.back(); 
     iter1++;
     l1.insert(iter1, 40);
+    l1.pop_back();
+    l1.pop_back();
     displaylistint(l1);
     displaylistchar(l2);
 return 0;
