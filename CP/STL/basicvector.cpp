@@ -18,9 +18,9 @@ int main() {
     vec2.push_back('b');
     vec2.push_back('c');
     vec2.push_back('d');
-    display(vec2);
+    // display(vec2);
     vector<double> vd(3, 3.14); // vector with 3 elements, each initialized to 3.14
-
+    display(vd);
     // int element; 
     // int size;
     // cout << "Enter size of vector: ";
