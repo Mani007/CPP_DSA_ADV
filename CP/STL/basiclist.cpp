@@ -2,10 +2,10 @@
 #include <list>
 using namespace std;
 // Linked list are non contiguous block of memory 
-//template <class T>
-void displaylist(list<int> &lst){
+template <class T>
+void displaylist(list<T> &lst){
     cout<<"display started here"<<endl;
-    list<int> :: iterator it ;
+    list<T> :: iterator it ;
     for (it=lst.begin(); it != lst.end(); it++){
         cout <<"The value of  " <<" is "<< *it << " "<<endl;
     }
