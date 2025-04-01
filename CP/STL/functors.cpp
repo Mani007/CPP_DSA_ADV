@@ -6,7 +6,7 @@ using namespace std;
 int main() {
 cout << "Function objects or functors" << endl;
 int arr[] = {2,6,3,1,9,5};
-sort(arr,arr+3);  // first 4 elemnets of the array are sorted here
+sort(arr,arr+3,greater<int>());  // first 4 elemnets of the array are sorted here and using function object greater we are printing first 4 element in descending order
 for(int i = 0; i < 5;i++){
     cout << arr[i] << " "<<endl;
 }
