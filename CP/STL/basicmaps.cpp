@@ -12,22 +12,12 @@ cout << "Maps STL in C++" << endl;
     marks["Bob"] = 78;
     marks["Charlie"] = 88;
     marks["David"] = 95;
-    // print elements in map
-    cout << "John's marks: " << marks["John"] << endl;
-    cout << "Alice's marks: " << marks["Alice"] << endl;
-    // update marks
-    marks["Bob"] = 90;
-    // print updated marks
-    cout << "Bob's updated marks: " << marks["Bob"] << endl;
-    // delete an element
-    marks.erase("Charlie");
-    // check if an element exists
-    if (marks.find("Charlie") == marks.end())
-        cout << "Charlie does not exist in the map." << endl;
-    // print all elements in map
-    cout << "All marks:" << endl;
-    for (auto it = marks.begin(); it != marks.end(); ++it)
-        cout << it->first << " - " << it->second << endl;
+    map<string,int> :: iterator iter; // iterator of map type
+    // print all key-value pairs in map
+    for (iter=marks.begin(); iter!=marks.end();iter++){
+        cout << "Name: " << iter->first << ", Marks: " << iter->second << endl; // first is the name variable in map objectand second is marks variable in map
+        cout << "Name: " << (*iter).first << ", Marks: " << (*iter).second << endl; //Pointer deref and typecasting first is the name variable in map objectand second is marks variable in map
+    }
     
 return 0;
 }
