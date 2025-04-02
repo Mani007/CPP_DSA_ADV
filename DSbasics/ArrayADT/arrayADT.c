@@ -10,6 +10,8 @@ void creatArray(struct myArray *arrayptr, int tsize, int usize){
     arrayptr->total_size = tsize;
     arrayptr->used_size = usize;
     arrayptr->ptr = (int*) malloc(tsize * sizeof(int)); // total required size of the array is allocated and address of the first element is written as int pointer
+    // We need to implement a function free the heap memory allocation to avoid memory leaks
+    //Also understand the pointer lifecycle. In C we do not have garbage collector so we need to know the lifetime of the pointer.
     if(arrayptr->ptr == NULL){
         printf("Memory error!\n");
         exit(0);
@@ -30,14 +32,14 @@ void setarray(struct myArray *arrayptr){
     int i;
     printf("Enter %d integers: ", arrayptr->used_size);
     for(i=0; i<arrayptr->used_size; i++){
-        scanf("%d", &arrayptr->ptr+i);  // We cannot do this as this will add i to the previous element check pointer arthematic and arrow operator in C
+        scanf("%d", &arrayptr->ptr[i]);  // scanf require address of the pointer
     }
     return;
 }
 int main() {
     struct myArray marks;
     printf("Creating and initializing an array\n");
-    creatArray(&marks,5,4);
+    creatArray(&marks,5,4);  // & means address of operator, * means value at operator, -> means pointed value at
     printf("Entering values for the array\n");
     setarray(&marks);
     printf("Displaying the array\n");
