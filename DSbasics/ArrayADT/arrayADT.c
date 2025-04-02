@@ -30,7 +30,7 @@ void setarray(struct myArray *arrayptr){
     int i;
     printf("Enter %d integers: ", arrayptr->used_size);
     for(i=0; i<arrayptr->used_size; i++){
-        scanf("%d", &arrayptr->ptr[i]);  // scanf require address of the pointer
+        scanf("%d", &arrayptr->ptr+i);  // We cannot do this as this will add i to the previous element check pointer arthematic and arrow operator in C
     }
     return;
 }
