@@ -44,7 +44,7 @@ struct Node* delfirst(struct Node *head){
         p = p->next;
         q = q->next;
     }
-    if(p->next!=NULL){
+    if(q->data == value){
         p->next = q->next; // updating the link of the previous node to skip the node to be deleted
         free(q); // freeing the memory of the node that was previously the head
     }
@@ -87,7 +87,7 @@ int main() {
     //first = delfirst(first);
     //first = delindex(first,2); // this will delete the node with value 30
     //first = dellast(first);
-    first = delvalue(first,30); // this will delete the node with value 10
+    first = delvalue(first,20); // this will delete the node with value 10
     printf("printing LL after deletion\n"); //
     lltraversal(first);
  
