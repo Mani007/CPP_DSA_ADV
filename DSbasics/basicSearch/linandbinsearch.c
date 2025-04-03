@@ -6,7 +6,7 @@ int LinearSearch(int arr[],int size,int element){
     }
     return -1; // element not found in array
 }
-int BinarySearch(int arr[],int size,int element){
+int BinarySearch(int arr[],int size,int element){ // Binary search only work with sorted array
     int mid,low,high;
     low = 0;
     high = size - 1;

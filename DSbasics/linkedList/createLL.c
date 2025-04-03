@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>  // for use of malloc and free
+struct Node{
+    int data;
+    struct Node *next;
+};
+int main() {
+    printf("Lined List creationand traversal\n");
+    printf("Creating all the pointers for all the list \n ");
+    struct Node *first,*second,*third, *last;
+    // Once you allocated the memory, its important to delete it if not in use anymore using free function
+    first = (struct Node *)malloc(sizeof(struct Node));
+    second = (struct Node *)malloc(sizeof(struct Node));
+    third = (struct Node *)malloc(sizeof(struct Node));
+    // Inserting data in first node and linking it to the next
+    first->data = 11;
+    first->next = second;
+    // Inserting data in second node and linking it to the next/second node
+    second->data = 20;
+    second->next = third;
+    // Inserting data in third node and linking it to the next/third node
+    third->data = 30;
+    third->next = last;
+    // Making last point to the last node in the list and linking it to the NULL for termination
+    last->data = 10;
+    last->next = NULL; // last will always point to NULL in the list
+
+return 0;
+}
