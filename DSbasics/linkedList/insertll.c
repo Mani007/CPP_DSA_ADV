@@ -23,8 +23,8 @@ struct Node* insertfirst(struct Node *head,int data){
     struct Node *newnode = (struct Node*)malloc(sizeof(struct Node));
     newnode->data = data;
     newnode->next = head;
-    head = newnode; // replacing the head node memory address to the newnode memory address
-    return head;
+    //head = newnode; // replacing the head node memory address to the newnode memory address
+    return newnode;
  }
 int main() {
     printf("Linked list insertion\n");
