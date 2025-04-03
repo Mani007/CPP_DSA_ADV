@@ -45,7 +45,7 @@ struct Node* insertfirst(struct Node *head,int data){
     struct Node *newnode = (struct Node*)malloc(sizeof(struct Node));
     struct Node *p = head; // link list traversal pointer
     int i=0;
-    while(p!=NULL){ // wrong code we need p-> next != NULL 
+    while(p->next!=NULL){ // Be careful with pointer, use pointer in dry run to visualize better 
         p = p->next;
         i++;
     }
