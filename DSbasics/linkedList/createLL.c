@@ -21,6 +21,7 @@ int main() {
     first = (struct Node *)malloc(sizeof(struct Node));
     second = (struct Node *)malloc(sizeof(struct Node));
     third = (struct Node *)malloc(sizeof(struct Node));
+    last = (struct Node *)malloc(sizeof(struct Node));
     // Inserting data in first node and linking it to the next
     first->data = 11;
     first->next = second;
@@ -31,7 +32,7 @@ int main() {
     third->data = 30;
     third->next = last;
     // Making last point to the last node in the list and linking it to the NULL for termination
-    last->data = 10; // Segmentation fault as we have not allocated memory for it
+    last->data = 10; // No segmentation error here now
     last->next = NULL; // last will always point to NULL in the list
     // Traversal of linkedlist nodes
     lltraversal(first);
