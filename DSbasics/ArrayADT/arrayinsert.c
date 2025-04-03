@@ -8,6 +8,7 @@ void display(int arr[],int n){   // Array traversal function
     printf("\n");
     return;
 }
+// This insertion function will insert a value at a given index and update the array size by shifting the elements to the right position 
 int insertin(int arr[],int *ptrsize,int element,int index,int capacity){
     if (*ptrsize>=capacity){
         return -1;
