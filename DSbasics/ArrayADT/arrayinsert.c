@@ -1,9 +1,10 @@
 #include <stdio.h>
 #define CAPACITY 10
+// There can be many possible variation of this type of problem in DSA
 void display(int arr[],int n){   // Array traversal function
     // Traversal 
     for(int i=0; i<n; i++){
-        printf("Value at %d is %d \t",i, arr[i]);
+        printf("Value at %d is %d  ",i, arr[i]);
     }
     printf("\n");
     return;
