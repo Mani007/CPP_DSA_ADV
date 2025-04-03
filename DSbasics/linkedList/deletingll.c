@@ -18,10 +18,23 @@ void lltraversal(struct Node *ptr){  // Time complexity is O(n) here
     }
     printf("\n");
 }
-struct Node *delfirst(struct Node *head){
+struct Node* delfirst(struct Node *head){
     struct Node *ptr = head; // storing the head value
     head = head->next; // moving the head to the next node
     free(ptr); // freeing the memory of the node that was previously the head
+    return head; // returning the new head of the list
+ }
+ struct Node* delindex(struct Node *head,int index){
+    struct Node *p = head;
+    struct Node *q = head->next;
+    int i=0;
+    for (int i; i<index-1; i++){ // traversal of LL nodes
+        p = p->next;
+        q = q->next;
+    }
+    
+    p->next = q->next; // updating the link of the previous node to skip the node to be deleted
+    free(q); // freeing the memory of the node that was previously the head
     return head; // returning the new head of the list
  }
 int main() {
@@ -47,7 +60,8 @@ int main() {
     last->next = NULL; // last will always point to NULL in the list
     printf("printing LL before deletion\n"); //
     lltraversal(first);
-    first = delfirst(first);
+    //first = delfirst(first);
+    first = delindex(first,2); // this will delete the node with value 30
     printf("printing LL after deletion\n"); //
     lltraversal(first);
  
