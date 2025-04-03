@@ -31,8 +31,9 @@ int main() {
     third->data = 30;
     third->next = last;
     // Making last point to the last node in the list and linking it to the NULL for termination
-    last->data = 10;
+    last->data = 10; // Segmentation fault as we have not allocated memory for it
     last->next = NULL; // last will always point to NULL in the list
+    // Traversal of linkedlist nodes
     lltraversal(first);
     printf("All the elements of the linked list as been printed \n");
     // Deleting the memory allocated for the nodes
