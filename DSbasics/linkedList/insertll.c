@@ -1,9 +1,15 @@
 #include <stdio.h>
-#include <stdlib.h>  // for use of malloc and free
+#include <stdlib.h>
+// Insert element in LL cases
+//1. Insert element at the beginning - changing the head node pointer value O(1)
+//2. Insert element at the end - changing the tail node pointer value  O(n)
+//3. Insert element in the middle - changing the mid node value O(n)
+//4. Insert element after the node - changing the given node pointer value O(1)
 struct Node{
     int data;
-    struct Node *next;
+    struct Node* next;
 };
+
 void lltraversal(struct Node *ptr){  // Time complexity is O(n) here
     int i=0;
     while(ptr!=NULL){
@@ -13,8 +19,15 @@ void lltraversal(struct Node *ptr){  // Time complexity is O(n) here
     }
     printf("\n");
 }
+struct Node* insertfirst(struct Node *head,int data){ 
+    struct Node *newnode = (struct Node*)malloc(sizeof(struct Node));
+    newnode->data = data;
+    newnode->next = head;
+    head = newnode; // replacing the head node memory address to the newnode memory address
+    return head;
+ }
 int main() {
-    printf("Lined List creationand traversal\n");
+    printf("Linked list insertion\n");
     printf("Creating all the pointers for all the list \n ");
     struct Node *first,*second,*third, *last;
     // Once you allocated the memory, its important to delete it if not in use anymore using free function
@@ -35,6 +48,7 @@ int main() {
     last->data = 10; // No segmentation error here now
     last->next = NULL; // last will always point to NULL in the list
     // Traversal of linkedlist nodes
+    first = insertfirst(first,55); // Inserting element in the begining of the list 
     lltraversal(first);
     printf("All the elements of the linked list as been printed \n");
     // Deleting the memory allocated for the nodes
