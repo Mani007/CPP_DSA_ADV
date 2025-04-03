@@ -56,6 +56,17 @@ struct Node* insertfirst(struct Node *head,int data){
     return head; // returning the head/first node to the main function
 
   }
+  struct Node* insertnodeafter(struct Node *head,struct Node *prevnode,int data){
+    struct Node *newnode = (struct Node*)malloc(sizeof(struct Node));
+    //struct Node *p = head; // link list traversal pointer
+    
+    // use diagram to visualize and understand better. 
+    newnode->next = prevnode->next; // new link is been establish here
+    newnode->data = data; // assigning the data to the new node
+    prevnode->next = newnode; // new new connection is been completed
+    return head; // returning the head/first node to the main function
+
+  }
 
 int main() {
     printf("Linked list insertion\n");
@@ -82,6 +93,7 @@ int main() {
     first = insertfirst(first,55); // Inserting element in the begining of the list
     first = insertindex(first,88,4); // Inserting element in the middle of the list 
     first = insertend(first,66); // Inserting element in the end of the list
+    first = insertnodeafter(first,third,77); // Inserting element in the end of the list
     lltraversal(first);
     printf("All the elements of the linked list as been printed \n");
     // Deleting the memory allocated for the nodes
