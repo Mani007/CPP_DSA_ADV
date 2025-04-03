@@ -39,6 +39,16 @@ struct Node* delfirst(struct Node *head){
  }
  struct Node* delvalue(struct Node *head,int value){
     struct Node *p = head;
+    struct Node *q = head->next; // q is one pointer ahead of p pointer
+    for (int i=0; p->next!=NULL && p->next->data!=value; i++){ // traversal of LL nodes
+        p = p->next;
+        q = q->next;
+    }
+    if(p->next!=NULL){
+        p->next = q->next; // updating the link of the previous node to skip the node to be deleted
+        free(q); // freeing the memory of the node that was previously the head
+    }
+    return head; // returning the new head of the list
  }
  struct Node* dellast(struct Node *head){
     struct Node *p = head;
@@ -76,7 +86,8 @@ int main() {
     lltraversal(first);
     //first = delfirst(first);
     //first = delindex(first,2); // this will delete the node with value 30
-    first = dellast(first);
+    //first = dellast(first);
+    first = delvalue(first,30); // this will delete the node with value 10
     printf("printing LL after deletion\n"); //
     lltraversal(first);
  
