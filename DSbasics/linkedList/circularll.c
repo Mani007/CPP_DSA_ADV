@@ -21,7 +21,7 @@ struct Node* cll_insertfirst(struct Node *head,int data){
         prev = prev->next;
     }
     prev->next = newNode;
-    
+    newNode->next = prev;
     return head;
 }
 int main() {
