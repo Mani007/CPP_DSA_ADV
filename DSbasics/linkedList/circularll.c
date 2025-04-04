@@ -12,6 +12,18 @@ void cll_traversal(struct Node *head){ // traversal of circular LL
     }while(current!=head);
     printf("\n");
 }
+struct Node* cll_insertfirst(struct Node *head,int data){
+    struct Node *newNode;
+    newNode = (struct Node *)malloc(sizeof(struct Node));
+    newNode->data = data;
+    struct Node *prev = head;
+    while(prev->next!=head){
+        prev = prev->next;
+    }
+    prev->next = newNode;
+    
+    return head;
+}
 int main() {
     printf("Circular linked list");
     struct Node *first,*second,*third, *last;
@@ -32,6 +44,7 @@ int main() {
     // Making last point to the last node in the list and linking it to the NULL for termination
     last->data = 10; // No segmentation error here now
     last->next = first; // last will always point to first in the list
+    first = cll_insertfirst(first,33);
     cll_traversal(first);
 return 0;
 }
