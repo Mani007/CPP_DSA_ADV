@@ -90,7 +90,8 @@ Look for best books, blogs,interviews, Indian youtubers and profiles in codeforc
 3. Use [Exposed float and binary values](https://float.exposed/)
 ## Tutorials  
 1. Basics of pointers [Link](https://www.youtube.com/watch?v=MIL2BK02X8A)
-
+## Debugger and Tools
+1. Python tutor for code visualization [Link](https://pythontutor.com/c.html#mode=edit)
 # Basic concept of OOP in C++
 1. Absolute basic terms
 - Class - Basic template for creating objects. 
