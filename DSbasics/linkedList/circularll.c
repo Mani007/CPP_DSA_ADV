@@ -20,9 +20,10 @@ struct Node* cll_insertfirst(struct Node *head,int data){
     while(prev->next!=head){
         prev = prev->next;
     }
-    prev->next = newNode;  // USE PAPER VISUALIZATION TO GET THE CORRECT POINTERS AND USE DEBUGGING
-    newNode->next = head;
-    head = newNode;
+    // USE PAPER VISUALIZATION TO GET THE CORRECT POINTERS AND USE DEBUGGING
+    prev->next = newNode;  // setting last element to first element 
+    newNode->next = head; // pointing  first element
+    head = newNode; // making circular reference
     return head;
 }
 int main() {
