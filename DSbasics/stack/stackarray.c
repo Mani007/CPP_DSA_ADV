@@ -60,14 +60,18 @@ int main() {
     // s->arr[++s->top] = 30;
     // printf("Popped element is %d\n", s->arr[s->top--]);
     // printf("Popped element is %d\n", s->arr[s->top--]);
-    // free(s);
+    
     // check if stack is empty 
-    struct Stack s;
-    s.maxSize = 5;
-    s.top = -1;
-    s.arr = (int*)malloc(s.maxSize * sizeof(int)); // allocate memory for given size of array
-    if (isEmpty(&s)){
+    struct Stack *sp; // pointer s to new stack
+    sp->maxSize = 5;
+    sp->top = -1;
+    sp->arr = (int*)malloc(s->maxSize * sizeof(int)); // allocate memory for given size of array
+    sp->arr[0] =100;
+    sp->top ++;
+    if (isEmpty(sp)==1){
         printf("Stack is totally empty");
+    } else {
+        printf("Stack has some value");
     }
     
      
