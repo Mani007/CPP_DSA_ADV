@@ -3,7 +3,8 @@
 struct Stack{
     int maxSize; // max size of stack
     int top; // index of top element
-    int arr[]; // array to store elements
+    int array[]; // array to store elements
+    // int *arr; // self referential pointer to the total size and can be accessed using index
 };
 int isEmpty(struct Stack *sptr){
     if (sptr->top == -1){
