@@ -3,7 +3,7 @@
 struct Stack{
     int maxSize; // max size of stack
     int top; // index of top element
-    int array[]; // array to store elements
+    int *arr; // array to store elements
     // int *arr; // self referential pointer to the total size and can be accessed using index
 };
 int isEmpty(struct Stack *sptr){
@@ -64,9 +64,9 @@ int main() {
     // printf("Stack pointer inside Stack is %p\n",sp->arr[1]);
     // printf("Stack pointer inside Stack is %p\n",sp->arr[sp->maxSize - 5]);
     push(sp,20);
-    push(sp,30);
+    //push(sp,30);
     // push(sp,40);
-    // printf("Top element is %d\n", pop(sp));
+     printf("Top element is %d\n", pop(sp));
     // printf("Next element is %d\n", pop(sp));
     // printf("Next element is %d\n", pop(sp));
     // printf("Next element is %d\n", pop(sp));
