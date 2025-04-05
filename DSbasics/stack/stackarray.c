@@ -75,6 +75,10 @@ int main() {
     
     struct Stack *sp; // pointer sp of stack
     sp = createStack(5);
+    sp->arr[0] = 10;
+    sp->top++;
+    sp->arr[1] = 20;
+    sp->top++;
     if (isEmpty(sp)==1){
         printf("Stack is totally empty");
     } else {
