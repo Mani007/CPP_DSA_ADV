@@ -66,7 +66,7 @@ int main() {
     push(sp,20);
     //push(sp,30);
     // push(sp,40);
-     printf("Top element is %d\n", pop(sp));
+    // printf("Top element is %d\n", pop(sp));
     // printf("Next element is %d\n", pop(sp));
     // printf("Next element is %d\n", pop(sp));
     // printf("Next element is %d\n", pop(sp));
