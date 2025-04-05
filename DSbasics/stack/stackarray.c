@@ -47,20 +47,19 @@ int pop(struct Stack *sptr){
 }
 
 struct Stack * createStack(int size){
-    struct Stack s;
-    s.maxSize = size;
-    s.top = -1;
-    s.arr = (int*)malloc(s.maxSize * sizeof(int)); // allocate memory for given size of array
-    struct Stack *sptr;
-    sptr = &s;
-    return sptr;
+    struct Stack *s = (struct Stack*)malloc(sizeof(struct Stack));
+    s->maxSize = size;
+    s->top = -1;
+    s->arr = (int*)malloc(s->maxSize * sizeof(int)); // allocate memory for given size of array
+    return s;
 }
 int main() {
     printf("Stack using Array\n");
-    struct Stack *s = (struct Stack*)malloc(sizeof(struct Stack));
-    s->maxSize = 5;
-    s->top = -1;
-    s->arr = (int*)malloc(s->maxSize * sizeof(int)); // allocate memory for given size of array
+    // struct Stack *s = (struct Stack*)malloc(sizeof(struct Stack));
+    // s->maxSize = 5;
+    // s->top = -1;
+    // s->arr = (int*)malloc(s->maxSize * sizeof(int)); // allocate memory for given size of array
+    struct Stack *s = createStack(5);
     push(s,25);
     push(s,45);
     push(s,55);
