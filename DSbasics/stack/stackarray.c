@@ -57,20 +57,15 @@ struct Stack * createStack(int size){
 }
 int main() {
     printf("Stack using Array\n");
-    struct Stack *sp; // pointer sp of stack
-    sp = createStack(5);
-    // printf("Stack pointer inside Stack is %p\n",sp->arr);
-    // printf("Stack pointer inside Stack is %p\n",sp->arr[0]);
-    // printf("Stack pointer inside Stack is %p\n",sp->arr[1]);
-    // printf("Stack pointer inside Stack is %p\n",sp->arr[sp->maxSize - 5]);
-    push(sp,20);
-    //push(sp,30);
-    // push(sp,40);
-    // printf("Top element is %d\n", pop(sp));
-    // printf("Next element is %d\n", pop(sp));
-    // printf("Next element is %d\n", pop(sp));
-    // printf("Next element is %d\n", pop(sp));
-    // printf("Next element is %d\n", pop(sp));
-     
+    struct Stack *s = (struct Stack*)malloc(sizeof(struct Stack));
+    s->maxSize = 5;
+    s->top = -1;
+    s->arr = (int*)malloc(s->maxSize * sizeof(int)); // allocate memory for given size of array
+    push(s,25);
+    push(s,45);
+    push(s,55);
+    printf("The poped value is %d \n",pop(s));
+    printf("The poped value is %d \n",pop(s));
+    
 return 0;
 }
