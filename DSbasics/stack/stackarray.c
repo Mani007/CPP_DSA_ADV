@@ -7,7 +7,7 @@ struct Stack{
     // int *arr; // self referential pointer to the total size and can be accessed using index
 };
 int isEmpty(struct Stack *sptr){
-    if (sptr->top == -1){
+    if (sptr->top == -1 || sptr->top < -1 ){
         return 1; // stack is empty
     } else {
         return 0; // stack is not empty
@@ -42,9 +42,17 @@ int pop(struct Stack *sptr){
         item = sptr->arr[sptr->top]; // store the top element
         sptr->top--; // decrement the top pointer
         return item; // return the popped element
-    }
-    
+    }    
 }
+int peak(struct Stack *sptr,int pos){
+    if (isEmpty(sptr) || sptr->top-pos+1<0){
+        printf("Invalid position\n");
+        return -1;
+    } else {
+        return sptr->arr[sptr->top-pos+1];
+    }
+}
+
 
 struct Stack * createStack(int size){
     struct Stack *s = (struct Stack*)malloc(sizeof(struct Stack));
@@ -63,8 +71,11 @@ int main() {
     push(s,25);
     push(s,45);
     push(s,55);
+    push(s,65);
     printf("The poped value is %d \n",pop(s));
     printf("The poped value is %d \n",pop(s));
+    printf("The peak value at position 2 is %d \n",peak(s,2));
+   
     
 return 0;
 }
