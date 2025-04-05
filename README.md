@@ -102,3 +102,14 @@ Look for best books, blogs,interviews, Indian youtubers and profiles in codeforc
 - Polymorphism - Ability to take more than one form. 
 - Dynamic binding - compile and execution time creation and linking of objects
 - Message passing - Communication between objects. object.message(info). 
+# Learning methods - To make mastery in the subject
+1. Don't just watch the videos or read books, implement it. 
+2. Test yourself, without any reference/support try to write the entire code. 
+3. Use previous codes if required. 
+4. Repeat testing step 2 at least 3 to 5 times to achieve mastery. REPETITION AND PRACTICE IS PATH TO MASTERY.   
+5. Try to solve real problems using the concepts learned - Applying the knowledge/concepts. 
+6. Give more tests, face the challenges. Give more interviews, practice challenges and puzzles. Practice first in mock interview and then appear in the real interview. 
+8. Contest - Appear in contests to showcase your talent.
+9. Hackathons - participate in hackathons 
+10. Open source - Make genuine contributions in Open source community.
+11. Do not ignore the AI. It can be your guide,mentor and a complete source for majority of answers. 

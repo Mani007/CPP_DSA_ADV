@@ -3,7 +3,7 @@
 struct Stack{
     int maxSize; // max size of stack
     int top; // index of top element
-    int *arr; // array to store elements
+    int arr[]; // array to store elements
 };
 int isEmpty(struct Stack *sptr){
     if (sptr->top == -1){
@@ -26,14 +26,14 @@ void push(struct Stack *sptr, int item){
         printf("Stack Overflow -PUSH failed\n");
         return;
     }else{
-        sptr->top++; // increment the top pointer
+        sptr->top=sptr->top+1; // increment the top pointer
         sptr->arr[sptr->top] = item; // insert the item at top position and increment the top pointer by 1
         printf("%d pushed to stack\n", item);
     }
 }
 
 int pop(struct Stack *sptr){
-    int item;
+    int item=0;
     if (isEmpty(sptr)){
         printf("Stack Underflow\n");
         return -1;
@@ -56,42 +56,20 @@ struct Stack * createStack(int size){
 }
 int main() {
     printf("Stack using Array\n");
-    // struct Stack s;
-    // s.maxSize = 10;
-    // s.top = -1;
-    // s.arr = (int*)malloc(s.maxSize * sizeof(int));// allocate memory for given size of array
-    //  push operation
-    // s.arr[++s.top] = 10;
-    // s.arr[++s.top] = 20;
-    // s.arr[++s.top] = 30;
-    //  pop operation
-    // printf("Popped element is %d\n", s.arr[s.top--]);
-    // printf("Popped element is %d\n", s.arr[s.top--]);
-    // free(s.arr); // free memory allocated for array
-    //struct Stack *s;
-    //s->maxSize = 15;
-    //s->top = -1;
-    //s->arr = (int*)malloc(s->maxSize * sizeof(int)); // allocate memory for given size of array
-    // s->arr[++s->top] = 10;
-    // s->arr[++s->top] = 20;
-    // s->arr[++s->top] = 30;
-    // printf("Popped element is %d\n", s->arr[s->top--]);
-    // printf("Popped element is %d\n", s->arr[s->top--]);
-    
-    // check if stack is empty 
-    
     struct Stack *sp; // pointer sp of stack
     sp = createStack(5);
-    // sp->arr[0] = 10;
-    // sp->top++;
-    // sp->arr[1] = 20;
-    // sp->top++;
-    if (isEmpty(sp)==1){
-        printf("Stack is totally empty");
-    } else {
-        printf("Stack has some value");
-    }
-    
+    // printf("Stack pointer inside Stack is %p\n",sp->arr);
+    // printf("Stack pointer inside Stack is %p\n",sp->arr[0]);
+    // printf("Stack pointer inside Stack is %p\n",sp->arr[1]);
+    // printf("Stack pointer inside Stack is %p\n",sp->arr[sp->maxSize - 5]);
+    push(sp,20);
+    push(sp,30);
+    // push(sp,40);
+    // printf("Top element is %d\n", pop(sp));
+    // printf("Next element is %d\n", pop(sp));
+    // printf("Next element is %d\n", pop(sp));
+    // printf("Next element is %d\n", pop(sp));
+    // printf("Next element is %d\n", pop(sp));
      
 return 0;
 }
