@@ -62,9 +62,9 @@ int main() {
     // printf("Popped element is %d\n", s->arr[s->top--]);
     
     // check if stack is empty 
-    struct Stack s;
+    //struct Stack s;
     struct Stack *sp; // pointer sp of stack
-    sp = &s; // assigning pointer reference
+    //sp = &s; // assigning pointer reference
     sp->maxSize = 5;
     sp->top = -1;
     sp->arr = (int*)malloc(sp->maxSize * sizeof(int)); // allocate memory for given size of array
