@@ -23,19 +23,26 @@ int isFull(struct Stack *sptr){
 
 void push(struct Stack *sptr, int item){
     if (isFull(sptr)){
-        printf("Stack Overflow\n");
+        printf("Stack Overflow -PUSH failed\n");
         return;
+    }else{
+        sptr->top++; // increment the top pointer
+        sptr->arr[sptr->top] = item; // insert the item at top position and increment the top pointer by 1
+        printf("%d pushed to stack\n", item);
     }
-    sptr->arr[++sptr->top] = item;
-    printf("%d pushed to stack\n", item);
 }
 
 int pop(struct Stack *sptr){
+    int item;
     if (isEmpty(sptr)){
         printf("Stack Underflow\n");
         return -1;
+    } else{
+        item = sptr->arr[sptr->top]; // store the top element
+        sptr->top--; // decrement the top pointer
+        return item; // return the popped element
     }
-    return sptr->arr[sptr->top--];
+    
 }
 
 struct Stack * createStack(int size){
@@ -75,10 +82,10 @@ int main() {
     
     struct Stack *sp; // pointer sp of stack
     sp = createStack(5);
-    sp->arr[0] = 10;
-    sp->top++;
-    sp->arr[1] = 20;
-    sp->top++;
+    // sp->arr[0] = 10;
+    // sp->top++;
+    // sp->arr[1] = 20;
+    // sp->top++;
     if (isEmpty(sp)==1){
         printf("Stack is totally empty");
     } else {
