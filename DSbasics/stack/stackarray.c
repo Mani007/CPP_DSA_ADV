@@ -37,6 +37,8 @@ int pop(struct Stack *sptr){
     }
     return sptr->arr[sptr->top--];
 }
+
+
 int main() {
     printf("Stack using Array\n");
     // struct Stack s;
@@ -67,7 +69,7 @@ int main() {
     sp = &s; // assigning pointer reference
     sp->maxSize = 5;
     sp->top = -1;
-    sp->arr = (int*)malloc(sp->maxSize * sizeof(int)); // allocate memory for given size of array
+    sp->arr = (int*)malloc((sp->maxSize) * sizeof(int)); // allocate memory for given size of array
     sp->arr[0] =100;
     sp->top ++;
     if (isEmpty(sp)==1){
