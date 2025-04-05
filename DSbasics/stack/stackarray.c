@@ -52,8 +52,42 @@ int peak(struct Stack *sptr,int pos){
         return sptr->arr[sptr->top-pos+1];
     }
 }
+int stackTop(struct Stack *sptr){
+    if (isEmpty(sptr)){
+        printf("Stack is empty\n");
+        return -1;
+    } else {
+        return sptr->arr[sptr->top];
+    }
+}
 
+int stackSize(struct Stack *sptr){
+    return sptr->top+1;
+}
 
+int stackCapacity(struct Stack *sptr){
+    return sptr->maxSize;
+}
+
+void display(struct Stack *sptr){
+    if (isEmpty(sptr)){
+        printf("Stack is empty\n");
+        return;
+    }
+    printf("Stack elements are: ");
+    for (int i=sptr->top; i>=0; i--){
+        printf("%d ", sptr->arr[i]);
+    }
+    printf("\n");
+}
+int stackBottom(struct Stack *sptr){
+    if (isEmpty(sptr)){
+        printf("Stack is empty\n");
+        return -1;
+    } else {
+        return sptr->arr[0];
+    }
+}
 struct Stack * createStack(int size){
     struct Stack *s = (struct Stack*)malloc(sizeof(struct Stack));
     s->maxSize = size;
