@@ -13,7 +13,8 @@ int main() {
     printf("Nested structure and pointers \n");
     struct nestedNode NN;
     struct Node n;
-    struct nestedNode *nn = (struct nestedNode *) malloc(sizeof(struct nestedNode));  // NOW this is segmentation error as we only have pointer not the instance of struct
+    //struct nestedNode *nn = (struct nestedNode *) malloc(sizeof(struct nestedNode));  // NOW this is segmentation error as we only have pointer not the instance of struct
+    struct nestedNode *nn ;  // NOW this is segmentation error as we only have pointer not the instance of struct
     nn = &NN;
     nn->size = 5;
     nn->N = n;
