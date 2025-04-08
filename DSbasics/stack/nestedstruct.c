@@ -10,13 +10,15 @@ struct nestedNode {
     struct Node N;
 };
 int main() {
-    printf("Nested structure and pointers");
-    struct nestedNode *nn = (struct nestedNode *) malloc(sizeof(struct nestedNode));
+    printf("Nested structure and pointers \n");
+    struct nestedNode *nn = (struct nestedNode *) malloc(sizeof(struct nestedNode));  // NOW this is segmentation error as we only have pointer not the instance of struct
     nn->size = 5;
     struct Node n;
     nn->N = n;
-    nn->in = (struct Node *) malloc(sizeof(struct Node));
-    nn->in->data = 100;
+    nn->in = &n;
+    // nn->in = (struct Node *) malloc(sizeof(struct Node));
+    //nn->in->data = 100;
+    nn->in->data=200;
     printf("Data is \n", nn->in->data); // this is segmentation error as we only have pointer not the instance of struct
    
 return 0;
