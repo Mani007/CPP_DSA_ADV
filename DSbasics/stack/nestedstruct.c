@@ -18,8 +18,8 @@ int main() {
     struct Node snode1;  // This is a separate node other than base struct
     struct Node *pnode11,*pnode1;
     //pnode1=&snode1; 
-    pnest1->in = pnode11;
     pnode11=&snode1;
+    pnest1->in = pnode11;
     pnest1->in->data = 155;
     pnest1->in->next = NULL;
     // nest1.N = snode1;
