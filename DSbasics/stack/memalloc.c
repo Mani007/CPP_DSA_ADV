@@ -1,17 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
-struct S{
+struct Sarr{
     int data1;
-    int data2;
+    
 };
 int main() {
     printf("Understanding Memory alllocation,pointers and different methods \n");
-    printf("Using pointer and malloc \n");
-    struct S *sp1 = (struct S *)malloc(sizeof(struct S));
+    printf("Array Using pointer and malloc \n");
+    struct Sarr *sp1 = (struct Sarr *)malloc(5*sizeof(struct Sarr)); // Array with size 5 
     sp1->data1 =10;
-    sp1->data2 = 14;
-    printf("The value of data1 using pointer is %d \n",sp1->data1);
-    printf("The value of data2 using pointer is %d \n",sp1->data2);
+    (sp1+1) ->data1 = 12;
+    (sp1+2) ->data1 = 14;
+    (sp1+3) ->data1 = 16;
+    (sp1+4) ->data1 = 18;
+    for (int i=0;i<5;i++){
+
+        printf("The value of data1 using pointer from  array using malloc is %d \n",(sp1+i)->data1);
+    }
 
     // printf("Very basic method \n");
     // struct S s1;
