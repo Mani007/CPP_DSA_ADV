@@ -27,7 +27,7 @@ int main() {
     b->N->next = b->N+3;
     b->top = b->N+2;
     //printf("Current value at top pointer is %d \n",b->top->data);
-    printf("Current value at top pointer is %d \n",b->top->data);
+    printf("Current value at top pointer is %d \n",(b->top -1)->data);
     // lets do reverse traversal using top pointer
     // for (int i=0;i<3;i++){
     //     printf("The value from the top pinter is %d \n",b->top+i->data);
