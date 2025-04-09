@@ -9,6 +9,7 @@ struct Bucket {
     struct Node *N;
     struct Node *top; // for tracking the top of the bucket something like stack/queue
 };
+// Be cautious with the () and the -> operators while using pointers. Practice is the king
 int main() {
     printf("Big nested structs \n");
     struct Bucket *b = (struct Bucket *) malloc(sizeof(struct Bucket)); // b is pointer to the bucket
