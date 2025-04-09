@@ -36,8 +36,9 @@ int main() {
     //     printf("The value from the top pinter is %d \n",(b->top-i)->data);
     // }
     // printing the queue operation mode
-    for (int i =0;i<3;i++){
-        printf("Form the bottom element is %d \n",b->bottom+i);
-    }
+    printf("The first data by bottom is %d \n",b->bottom->data);
+    // for (int i =0;i<3;i++){
+    //     printf("Form the bottom element is %d \n",b->bottom+i);
+    // }
 return 0;
 }
