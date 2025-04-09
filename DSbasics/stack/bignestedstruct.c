@@ -19,16 +19,18 @@ int main() {
     b->N->data = 212;
     b->N->next = b->N+1;
     // inserting next element
-    b->N->data = 214;
+    (b->N+1)->data = 214;
     b->N->next = b->N+2;
     b->top = b->N+1;
     // inserting third element
-    b->N->data = 216;
+    (b->N+2)->data = 216;
     b->N->next = b->N+3;
     b->top = b->N+2;
+    //printf("Current value at top pointer is %d \n",b->top->data);
+    printf("Current value at top pointer is %d \n",b->top->data);
     // lets do reverse traversal using top pointer
-    for (int i=0;i<3;i++){
-        printf("The value from the top pinter is %d \n",b->(top+i)->data);
-    }
+    // for (int i=0;i<3;i++){
+    //     printf("The value from the top pinter is %d \n",b->top+i->data);
+    // }
 return 0;
 }
