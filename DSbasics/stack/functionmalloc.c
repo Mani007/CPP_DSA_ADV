@@ -21,6 +21,7 @@ struct Stack {
 struct Stack * createStack(int size){
     struct Stack *sptr = (struct Stack *)malloc(sizeof(struct Stack));
     sptr->N = (struct Node *)malloc(size *sizeof(struct Node));
+    (sptr->N)->next = sptr->N;
     sptr->top = sptr->N;
     sptr->track = 0;
     return sptr;
@@ -43,7 +44,7 @@ int isFullStack(struct Stack *sptr){
     }
 
 }
-int isFullQueue(struct Queue *s){
+int isFullQueue(struct Queue *s){}
 void displayStack(struct Stack *sptr){
     if (sptr->track == 0){
     printf("Stack is empty \n");    
@@ -66,6 +67,8 @@ void pushStack(struct Stack *sptr,int data){
 
         // Set data 
         sptr->top->data = data;
+        // we need to align the next pointers in Node
+        (sptr->N)->next = ((sptr->N)->next)+1;
         // increment the top pointer
         sptr->top = (sptr->top)+1;
         sptr->track = (sptr->track)+1;
@@ -85,7 +88,6 @@ int popQueue(struct Queue *qptr){
 }
 
 
-}
 int main() {
     printf("The Function for memory allocation and access \n");
     struct Stack *s = createStack(5);
