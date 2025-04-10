@@ -88,6 +88,9 @@ Look for best books, blogs,interviews, Indian youtubers and profiles in codeforc
 1. Use memory profiler such as **memory view** extension in VS code. 
 2. Use [Visualize coding platform - python tutor](https://pythontutor.com/)
 3. Use [Exposed float and binary values](https://float.exposed/)
+4. Best Resources [All resources for CP](https://www.youtube.com/watch?v=zZOQVLll9u4)
+5. Code forces sorted problem list [A2OJ](https://earthshakira.github.io/a2oj-clientside/server/Ladders.html)
+5. Online Question [A2 online judge](https://a2oj.netlify.app/)
 ## Tutorials  
 1. Basics of pointers [Link](https://www.youtube.com/watch?v=MIL2BK02X8A)
 ## Debugger and Tools
