@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+// All this stack and queue are implemented using array
 struct Node{
     int data;
     struct Node *next;
