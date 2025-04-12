@@ -29,12 +29,12 @@ struct Node * pushData(struct Node *n,int data){
 
 void display(struct Node *n){
     struct Node *p,*q;
-    p = n->start;
+    p = n->start; // first node value 
     //q = n->next;
     while(p->next != NULL){
         printf("Data %d \n",p->data);
         //q = n->next;
-        n = p->next;  // we need to fix this pointer
+        p = n->next;  // we need to fix this pointer
     }
 }
 
