@@ -7,11 +7,13 @@
 struct Node {
     int data;
     struct Node *next;
+
 };
 struct Node * createBaseNode(void){
     struct Node *N = (struct Node *)malloc(sizeof(struct Node));
     return N;
 }
+
 struct Node * push(struct Node *n,int data){
     struct Node *N = (struct Node *)malloc(sizeof(struct Node));
     N->data = data;
@@ -31,17 +33,16 @@ struct Node * pop(struct Node *n){
     }
 }
 void displayNodes(struct Node *n){
-    if (n->next != NULL){
-        struct Node *p;
-        p = n;
-        while (p->next != NULL){
-            printf("The data of the node is %d \n",p->data);
-            p = p->next;
+        while (n->next != NULL){
+            if (n->next == NULL){
+                printf("The list is empty. \n");
+            } else {
+                printf("The data of the node is %d \n",n->data);
+                n = n->next;
+            }
         }
-    } else {
-        printf("This linked list is empty.  \n");
-    }
 }
+
 int main() {
     printf("Understding Linked List traversal in dynamic data \n");
     struct Node *nn = createBaseNode();

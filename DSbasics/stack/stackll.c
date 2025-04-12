@@ -19,10 +19,7 @@ struct StackNode* createStackNode(int size){
     return newNode;
 }
 
-void push(struct StackNode* stackNode, int data) {
-    struct stackNode* newNode = (struct stackNode*) malloc(sizeof(struct stackNode));
-    newNode->data = data;
-}
+
 int main() {
     printf("Stack using Linked list");
 
