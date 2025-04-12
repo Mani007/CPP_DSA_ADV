@@ -22,6 +22,7 @@ struct Node * pushData(struct Node *n,int data){
     N->next = NULL;
     n->data = data;
     n->next = N;
+    N->start = n->start;
     //N->start = n;
     return N;
 }
@@ -33,7 +34,7 @@ void display(struct Node *n){
     while(p->next != NULL){
         printf("Data %d \n",p->data);
         //q = n->next;
-        p->next = n->next;
+        p->next = n->next;  // we need to fix this pointer
     }
 }
 
