@@ -19,6 +19,13 @@ int isStackFull(struct Stack *sptr){
         return 1;
     }
 }
+int isStackempty(struct Stack *sptr){
+    if (sptr->track==0){
+        return 1;
+    } else {
+        return 0;
+    }
+}
 struct Stack * createStack(int size){
     struct Stack *sptr = (struct Stack *)malloc(sizeof(struct Stack));
     sptr->size = size;
@@ -40,7 +47,23 @@ struct Stack * pushStack(struct Stack *sptr,int data){
         return sptr;        
     }
 }
+void displayStack(struct Stack *sptr){
+    if (isStackempty(sptr) ==0){
+        for (int i=0;i<sptr->track;i++){
+            printf("The data at the index %d is %d \n",i,(sptr->N+i)->data);
+        }
+        return;
+    } else {
+        printf("The stack is empty. \n");
+        return;
+    }
+}
 int main(){
-    printf("The simle stack using link list. \n");
+    printf("The simple stack using link list. \n");
+    struct Stack *s = createStack(5);
+    s = pushStack(s,30);
+    s = pushStack(s,60);
+    displayStack(s);
+
     return 0;
 }
