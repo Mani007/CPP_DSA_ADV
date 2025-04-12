@@ -16,6 +16,7 @@ struct Node * createNode(void){
     N->start = N;
     return N;
 }
+//the start pointer is losing its value when we wre pushing the new node - we need different algo [Debugger result]
 struct Node * pushData(struct Node *n,int data){
     struct Node *N = (struct Node *)malloc(sizeof(struct Node));
     N->next = NULL;
