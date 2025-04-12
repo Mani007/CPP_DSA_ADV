@@ -26,6 +26,16 @@ struct Node * pushData(struct Node *n,int data){
     //N->start = n;
     return N;
 }
+// Lets implement the pop operations
+struct Node * popData(struct Node *n){
+    // We can pop in queue FIFO way
+    struct Node *p,*q; 
+    p = n->start; // We got the first node
+    q = n->next; // We got the next node here
+    q->start = p->next; // moving the pointer to next node 
+    return q;
+}
+
 
 void display(struct Node *n){
     struct Node *p,*q;
@@ -46,6 +56,7 @@ int main() {
     //printf("The data is %d \n",nn->data);
     nn = pushData(nn,52);
     nn = pushData(nn,61);
+    popData(nn);
     //printf("The data is %d \n",nn->data);
     display(nn);
 return 0;
