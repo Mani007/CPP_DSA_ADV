@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+// Refer lladvance.c file
 // A simple linked list with base node as null 
 // each node we add to the LL, we store the next node next address to just a node back to it. 
 // We will traverse the node from the top node and till our next node will become NULL
@@ -32,10 +33,10 @@ struct Node * pop(struct Node *n){
 void displayNodes(struct Node *n){
     if (n->next != NULL){
         struct Node *p;
-        p = n->next;
-        while (n->next != NULL){
+        p = n;
+        while (p->next != NULL){
             printf("The data of the node is %d \n",p->data);
-            p->next = n->next;
+            p = n->next;
         }
     } else {
         printf("This linked list is empty.  \n");
