@@ -34,7 +34,7 @@ void display(struct Node *n){
     while(p->next != NULL){
         printf("Data %d \n",p->data);
         //q = n->next;
-        p->next = n->next;  // we need to fix this pointer
+        n = p->next;  // we need to fix this pointer
     }
 }
 
