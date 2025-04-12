@@ -36,7 +36,7 @@ void displayNodes(struct Node *n){
         p = n;
         while (p->next != NULL){
             printf("The data of the node is %d \n",p->data);
-            p = n->next;
+            p = p->next;
         }
     } else {
         printf("This linked list is empty.  \n");
