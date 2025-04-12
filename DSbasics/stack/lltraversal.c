@@ -45,6 +45,7 @@ int main() {
     nn = pushData(nn,25);
     //printf("The data is %d \n",nn->data);
     nn = pushData(nn,52);
+    nn = pushData(nn,61);
     //printf("The data is %d \n",nn->data);
     display(nn);
 return 0;
