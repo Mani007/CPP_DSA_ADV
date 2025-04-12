@@ -16,20 +16,34 @@ struct Node * createNode(void){
     N->start = N;
     return N;
 }
-void pushData(struct Node *n,int data){
+struct Node * pushData(struct Node *n,int data){
     struct Node *N = (struct Node *)malloc(sizeof(struct Node));
     N->next = NULL;
     n->data = data;
     n->next = N;
+    //N->start = n;
+    return N;
+}
+
+void display(struct Node *n){
+    struct Node *p,*q;
+    p = n->start;
+    //q = n->next;
+    while(p->next != NULL){
+        printf("Data %d \n",p->data);
+        //q = n->next;
+        p->next = n->next;
+    }
 }
 
 
 int main() {
     printf("Understding Linked List traversal in dynamic data \n");
     struct Node *nn = createNode();
-    pushData(nn,25);
-    printf("The data is %d \n",nn->data);
-    pushData(nn,52);
-    printf("The data is %d \n",nn->data);
+    nn = pushData(nn,25);
+    //printf("The data is %d \n",nn->data);
+    nn = pushData(nn,52);
+    //printf("The data is %d \n",nn->data);
+    display(nn);
 return 0;
 }
