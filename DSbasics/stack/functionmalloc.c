@@ -71,7 +71,7 @@ void pushStack(struct Stack *sptr,int data){
         (sptr->N)->next = ((sptr->N)->next)+1;
         // increment the top pointer
         sptr->top = (sptr->top)+1;
-        sptr->track = (sptr->track)+1;
+        sptr->track = sptr->track+1;
         //return sptr;
     }
 
@@ -91,5 +91,8 @@ int popQueue(struct Queue *qptr){
 int main() {
     printf("The Function for memory allocation and access \n");
     struct Stack *s = createStack(5);
+    pushStack(s,30);
+    pushStack(s,60);
+    displayStack(s);
 return 0;
 }
