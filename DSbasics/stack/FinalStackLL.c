@@ -45,6 +45,17 @@ int pop(struct Node **top){ // We are using double pointer here
 
     }
 }
+int peek(struct Node *top,int pos){
+    struct Node *ptr = top;
+    for (int i=0;(i<pos-1 && ptr!=NULL);i++){
+        ptr = ptr->next;
+    }
+    if (ptr!= NULL){
+        return ptr->data;
+    } else {
+        return -1;
+    }
+}
 void Display(struct Node *top){
     while(top != NULL){
         printf("The data is %d \n", top->data);
@@ -57,8 +68,12 @@ int main() {
     top = push(top,55);
     top = push(top,65);
     top = push(top,75);
+    top = push(top,95);
+    top = push(top,105);
     int element = pop(&top);
     printf("The returned element is %d \n", element);
+    int p = peek(top,3);
+    printf("The peek value is %d \n",p);
     Display(top);
 return 0;
 }
