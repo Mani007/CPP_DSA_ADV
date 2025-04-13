@@ -31,6 +31,19 @@ struct Node * push(struct Node *top,int data){
         return top;
     }
 }
+int pop(struct Node **top){
+    if (isEmpty(*top)==1){
+        printf("Stack is empty");
+        return 0;
+    } else {
+        struct Node *n =*top; // storing the original pointer
+        *top = (*top)->next; // decrementing the pointer
+        int x = n->data;
+        free(n);
+        return x;
+
+    }
+}
 void Display(struct Node *top){
     while(top != NULL){
         printf("The data is %d \n", top->data);
@@ -43,6 +56,8 @@ int main() {
     top = push(top,55);
     top = push(top,65);
     top = push(top,75);
+    int element = pop(&top);
+    printf("The returned element is %d \n", element);
     Display(top);
 return 0;
 }
