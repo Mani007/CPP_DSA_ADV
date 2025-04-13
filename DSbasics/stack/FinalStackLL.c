@@ -72,8 +72,10 @@ int main() {
     top = push(top,105);
     int element = pop(&top);
     printf("The returned element is %d \n", element);
-    int p = peek(top,3);
-    printf("The peek value is %d \n",p);
+    for (int i=1;i<4;i++){
+        int p = peek(top,i);
+        printf("The peek value is %d \n",p);
+    }
     Display(top);
 return 0;
 }
