@@ -31,7 +31,7 @@ struct Node * push(struct Node *top,int data){
         return top;
     }
 }
-int pop(struct Node **top){
+int pop(struct Node **top){ // We are using double pointer here 
     if (isEmpty(*top)==1){
         printf("Stack is empty");
         return 0;
