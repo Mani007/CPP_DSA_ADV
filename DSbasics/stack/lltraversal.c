@@ -56,7 +56,7 @@ int main() {
     //printf("The data is %d \n",nn->data);
     nn = pushData(nn,52);
     nn = pushData(nn,61);
-    popData(nn);
+    nn = popData(nn);
     //printf("The data is %d \n",nn->data);
     display(nn);
 return 0;

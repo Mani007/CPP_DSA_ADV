@@ -1,5 +1,17 @@
 # All the Advance concept for Data Structures and Algorithm 
 Although the programming language is mainly c++ and python, but I will try to keep it completely language agnostic.    
+There are mainly 10 types of data structures. 
+1. Arrays
+2. Linked List
+3. Stack
+4. Queue
+5. Trees
+6. Graphs
+7. Hash Tables
+8. Sets/Disjoint/unordered sets
+9. Special trees such as AVL tree, Segment trees, tertiary trees etc.
+10. Special Graphs - graph
+11. Tires 
 ### Some important concepts
 These concepts are worth the refresher.    
 1. Ponters in C/C++
