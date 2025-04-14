@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct Node{
+    char data;
+    int size;
+    int top;
+    struct Node *next;
+    //struct Node *top;
+};
+
+int isEmpty(struct Node *c){
+    if (c->next == NULL){
+        printf("Stack is empty\n");
+        return 1;
+    } else {
+        return 0;
+    }
+}
+int isFull(struct Node *c){
+    if (c->size == c->top ){
+        printf("Stack is full \n");
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+struct Node * createStack(int size){
+    struct Node *N = (struct Node *)malloc(size*sizeof(struct Node)); // array of nodes
+    N->size = size;
+    N->top = 0;
+    N->next = NULL;
+    return N;
+}
+struct Node *addNode(struct Node *n,char data){
+    if(isFull(n)==1){
+        printf("Stack is already full. \n");
+        return n;
+    } else {
+        struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
+    }
+}
+void displayStack(struct Node *c){
+
+}
+int main() {
+    printf("Parenthesis matching \n");
+return 0;
+}
