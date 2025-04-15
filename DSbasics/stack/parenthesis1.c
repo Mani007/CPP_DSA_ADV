@@ -106,9 +106,15 @@ int main() {
     printf("Char count %d \n",countChar(cp)); // This is working
     //int m = parenthesisMatch(cp);
     struct Node *C=createStack(10);
-    C = pushNode(C,*cp);
-    C = pushNode(C,*(cp+1));
-    C = pushNode(C,*(cp+2));
+    for (int i=0;i<countChar(cp);i++){
+        if (*(cp+i) == "("){
+            C = pushNode(C,*(cp+i));
+        } 
+        
+    }
+    // C = pushNode(C,*cp);
+    // C = pushNode(C,*(cp+1));
+    // C = pushNode(C,*(cp+2));
     // C = popNode(C);
     displayStack(C);
     // Now we are good to go for parenthesis matching
