@@ -62,13 +62,21 @@ void displayStack(struct Node *c){
         c = c->next; // Very important pointer decrementing condition 
     }
 }
+int parenthesisMatch(char *exp){
+
+}
 int main() {
     printf("Parenthesis matching \n");
-    struct Node *C=createStack(5);
-    C = pushNode(C,'a');
-    C = pushNode(C,'b');
-    C = pushNode(C,'c');
-    C = popNode(C);
-    displayStack(C);
+    char c = 'a';
+    char *cp = &c;
+    *cp = 'a';
+    printf("Char is %c \n",*cp);
+    // struct Node *C=createStack(10);
+    // C = pushNode(C,'a');
+    // C = pushNode(C,'b');
+    // C = pushNode(C,'c');
+    // C = popNode(C);
+    // displayStack(C);
+    // Now we are good to go for parenthesis matching
 return 0;
 }
