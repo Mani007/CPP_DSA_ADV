@@ -32,18 +32,31 @@ struct Node * createStack(int size){
     N->next = NULL;
     return N;
 }
-struct Node *addNode(struct Node *n,char data){
+struct Node *pushNode(struct Node *n,char data){
     if(isFull(n)==1){
         printf("Stack is already full. \n");
         return n;
     } else {
         struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
+        newNode->data = data;
+        newNode->next = n;
+        newNode->size = n->size;
+        newNode->top = n->top+1;
+        return newNode;
     }
 }
 void displayStack(struct Node *c){
-
+    while(c->next!=NULL){
+        printf("The data in stack is %c \n",c->data);
+        c = c->next; // Very important pointer decrementing condition 
+    }
 }
 int main() {
     printf("Parenthesis matching \n");
+    struct Node *C=createStack(5);
+    C = pushNode(C,'a');
+    C = pushNode(C,'b');
+    C = pushNode(C,'c');
+    displayStack(C);
 return 0;
 }
