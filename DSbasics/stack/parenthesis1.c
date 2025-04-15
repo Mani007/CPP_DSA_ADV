@@ -67,10 +67,12 @@ int parenthesisMatch(char *exp){
 }
 int main() {
     printf("Parenthesis matching \n");
-    char c = 'a';
-    char *cp = &c;
+    char c[5];
+    char *cp = c;
     *cp = 'a';
+    *(cp+1) = 'b';
     printf("Char is %c \n",*cp);
+    printf("Char is %c \n",*(cp+1));
     // struct Node *C=createStack(10);
     // C = pushNode(C,'a');
     // C = pushNode(C,'b');
