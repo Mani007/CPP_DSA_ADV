@@ -106,11 +106,12 @@ int main() {
     printf("Char count %d \n",countChar(cp)); // This is working
     //int m = parenthesisMatch(cp);
     struct Node *C=createStack(10);
-    // if (*cp == '('){
-    //     C = pushNode(C,*cp);
-    // } 
+    
     for (int i=0;i<countChar(cp);i++){
-        printf("Char is %c \n",*(cp+i)); 
+        if (*(cp+i) == '2'){
+            //C = pushNode(C,*cp);
+            printf("Char is %c \n",*(cp+5)); 
+        } 
     }
     // C = pushNode(C,*cp);
     // C = pushNode(C,*(cp+1));
