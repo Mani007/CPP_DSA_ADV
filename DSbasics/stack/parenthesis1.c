@@ -73,6 +73,10 @@ int main() {
     *(cp+1) = 'b';
     printf("Char is %c \n",*cp);
     printf("Char is %c \n",*(cp+1));
+    printf("Char is %c \n",*(cp+2)); // some garbage value is printer in the array
+    printf("Char is %c \n",*(cp+4)); // some garbage value is printer in the array
+    printf("Char is %c \n",*(cp+5)); // some garbage value is printer in the array
+    printf("Char is %c \n",*(cp+6)); // some garbage value is printer in the array
     // struct Node *C=createStack(10);
     // C = pushNode(C,'a');
     // C = pushNode(C,'b');
