@@ -84,10 +84,10 @@ int parenthesisMatch(char *exp){
     //get the length and loop over each char //check for opening and closing bracket // push and pop it into stack accordingly // check if stack is empty // return 1 if empty and 0 if not.
     struct Node *sptr = createStack(25); 
     for (int i=0;i<countChar(exp);i++){
-        if (*(exp+i) == "("){
+        if (*(exp+i) == '('){
             sptr = pushNode(sptr,*(exp+i));
         } 
-        else if (*(exp+i) == ")")
+        else if (*(exp+i) == ')')
         {
             sptr = popNode(sptr);
         }
@@ -102,10 +102,13 @@ int parenthesisMatch(char *exp){
 }
 int main() {
     printf("Parenthesis matching \n");
-    char *cp = "2+(3+6))";
+    char cp[]= "(((2+(3+6))";
     printf("Char count %d \n",countChar(cp)); // This is working
     //int m = parenthesisMatch(cp);
     struct Node *C=createStack(10);
+    // if (*cp == '('){
+    //     C = pushNode(C,*cp);
+    // } 
     for (int i=0;i<countChar(cp);i++){
         if (*(cp+i) == "("){
             C = pushNode(C,*(cp+i));
