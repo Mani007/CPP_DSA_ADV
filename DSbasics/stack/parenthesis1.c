@@ -106,22 +106,22 @@ int parenthesisMatch(char *exp){
 }
 int main() {
     printf("Parenthesis matching \n");
-    char *cp= "(2+(3+6))";
+    char *cp= "((2+(3+6))";
     printf("Char count %d \n",countChar(cp)); // This is working
-    //int m = parenthesisMatch(cp);
-    struct Node *C=createStack(10);
+    int m = parenthesisMatch(cp);
+    // struct Node *C=createStack(10);
     
-    for (int i=0;i<countChar(cp);i++){
-        if (*(cp+i) == ')'){
-            C = pushNode(C,*(cp+i));
-            //printf("Char is %c \n",*(cp+5)); 
-        } 
-    }
+    // for (int i=0;i<countChar(cp);i++){
+    //     if (*(cp+i) == ')'){
+    //         C = pushNode(C,*(cp+i));
+    //         //printf("Char is %c \n",*(cp+5)); 
+    //     } 
+    // }
     // C = pushNode(C,*cp);
     // C = pushNode(C,*(cp+1));
     // C = pushNode(C,*(cp+2));
     // C = popNode(C);
-    displayStack(C);
+    //displayStack(C);
     // Now we are good to go for parenthesis matching
 return 0;
 }
