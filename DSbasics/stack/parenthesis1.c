@@ -68,8 +68,9 @@ int parenthesisMatch(char *exp){
 int main() {
     printf("Parenthesis matching \n");
     char *cp = "abcdef";
-    printf("The char array is %c \n",*cp); // this will only print the first character of the array
-    printf("The char array is %c \n",*(cp+1)); // this will only print the second character of the array
+    for (int i=0;i<6;i++){
+        printf("The char array is at index %d = %c \n",i,*(cp+i));
+    }
     // struct Node *C=createStack(10);
     // C = pushNode(C,'a');
     // C = pushNode(C,'b');
