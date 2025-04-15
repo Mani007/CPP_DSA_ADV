@@ -57,9 +57,13 @@ struct Node * popNode(struct Node *c){
     }
 }
 void displayStack(struct Node *c){
-    while(c->next!=NULL){
-        printf("The data in stack is %c \n",c->data);
-        c = c->next; // Very important pointer decrementing condition 
+    if (c->next == NULL){
+        printf("There is no data to display. \n");
+    } else{
+        while(c->next!=NULL){
+            printf("The data in stack is %c \n",c->data);
+            c = c->next; // Very important pointer decrementing condition 
+        }
     }
 }
 int countChar(char *exp){
@@ -108,16 +112,16 @@ int main() {
     struct Node *C=createStack(10);
     
     for (int i=0;i<countChar(cp);i++){
-        if (*(cp+i) == '2'){
-            //C = pushNode(C,*cp);
-            printf("Char is %c \n",*(cp+5)); 
+        if (*(cp+i) == ')'){
+            C = pushNode(C,*(cp+i));
+            //printf("Char is %c \n",*(cp+5)); 
         } 
     }
     // C = pushNode(C,*cp);
     // C = pushNode(C,*(cp+1));
     // C = pushNode(C,*(cp+2));
     // C = popNode(C);
-    //displayStack(C);
+    displayStack(C);
     // Now we are good to go for parenthesis matching
 return 0;
 }
