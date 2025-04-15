@@ -62,15 +62,49 @@ void displayStack(struct Node *c){
         c = c->next; // Very important pointer decrementing condition 
     }
 }
-int parenthesisMatch(char *exp){
+int countChar(char *exp){
+    //variable used to access the subsequent array elements.
+    int offset = 0;
+    //variable that counts the number of elements in your array
+    int count = 0;
 
+    //While loop that tests whether the end of the array has been reached
+    while (*(exp + offset) != '\0')
+    {
+        //increment the count variable
+        ++count;
+        //advance to the next element of the array
+        ++offset;
+    }
+    //return the size of the array
+    return count;
+}
+int parenthesisMatch(char *exp){
+    // Algo
+    //get the length and loop over each char //check for opening and closing bracket // push and pop it into stack accordingly // check if stack is empty // return 1 if empty and 0 if not.
+    struct Node *sptr = createStack(25); 
+    for (int i=0;i<countChar(exp);i++){
+        if (*(exp+i) == "("){
+            sptr = pushNode(sptr,*(exp+i));
+        } 
+        else if (*(exp+i) == ")")
+        {
+            sptr = popNode(sptr);
+        }
+    }
+    if (isEmpty(sptr) == 1){
+        printf("Parenthesis Matched \n");
+        return 1;
+    } else {
+        printf("Does not match  \n");
+        return 0;
+    }
 }
 int main() {
     printf("Parenthesis matching \n");
-    char *cp = "abcdef";
-    for (int i=0;i<6;i++){
-        printf("The char array is at index %d = %c \n",i,*(cp+i));
-    }
+    char *cp = "2+(3+6))";
+    printf("Char count %d \n",countChar(cp)); // This is working
+    //int m = parenthesisMatch(cp);
     // struct Node *C=createStack(10);
     // C = pushNode(C,'a');
     // C = pushNode(C,'b');
