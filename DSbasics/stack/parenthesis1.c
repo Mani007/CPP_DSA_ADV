@@ -45,6 +45,17 @@ struct Node *pushNode(struct Node *n,char data){
         return newNode;
     }
 }
+struct Node * popNode(struct Node *c){
+    if (isEmpty(c)==1){
+        printf("Stack is empty \n");
+        return c;
+    }else {
+        struct Node *main = c; // storing the main node pointer
+        struct Node *prev = c->next; // storing the next node pointer
+        free(main);
+        return prev;
+    }
+}
 void displayStack(struct Node *c){
     while(c->next!=NULL){
         printf("The data in stack is %c \n",c->data);
@@ -57,6 +68,7 @@ int main() {
     C = pushNode(C,'a');
     C = pushNode(C,'b');
     C = pushNode(C,'c');
+    C = popNode(C);
     displayStack(C);
 return 0;
 }
