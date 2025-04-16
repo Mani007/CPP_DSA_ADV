@@ -71,6 +71,8 @@ int main() {
     q = qpush(q,45); 
     q = qpush(q,55); 
     q = qpush(q,65);
+    q= qpop(q);
+    q= qpop(q);
     display(q); 
     
 return 0;
