@@ -28,7 +28,7 @@ int main() {
     //qq->front +=1;
     qq->last +=1;
     // print all the element from the queue 
-    for (int i=0;i<=qq->last;i++){
+    for (int i=qq->front;i<=qq->last;i++){
         printf("The value of element at %d is %d \n",i,qq->arr[i]);
     }
 return 0;
