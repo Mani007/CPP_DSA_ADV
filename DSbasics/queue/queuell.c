@@ -16,6 +16,7 @@ int isEmpty(struct Queue *q){
     }
 }
 int isFull(struct Queue *q){
+    // We also need to implement queue full condition effectively while using the array data structure. 
     if (q->size <= q->track){
         printf("The stack is full \n");
         return 1;
