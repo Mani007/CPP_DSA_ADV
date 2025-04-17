@@ -48,14 +48,26 @@ struct Queue * qpushll(struct Queue *qq,int data){
 
     }
 }
+struct Queue * qpopll(struct Queue *q){
+    if(isEmpty(q)==1){
+        printf("Queue is already empty. \n");
+        return q;
+    } else {
+        struct Queue *p =q; // original pointer
+        q= q->top;  // use Address and pen-paper diagram to visualize the pointers increment and decrement operations. 
+        q->track -=1;
+        free(p);
+        return q;
+    }
+}
 void display(struct Queue *q){
     if (isEmpty(q) ==1){
         printf("Queue is empty. \n");
     } else {
-        struct Queue *p =q; // original pointer 
+        // struct Queue *p =q; // original pointer 
         while(q->top != NULL){  // q->top is the value of next pointer
             printf("The queue data is %d \n", q->qdata);
-            q = q->top ;
+            q = q->top ;  // Very important step, use pen-paper and visualize correctly
         }
     }
 }
@@ -67,6 +79,8 @@ int main() {
     qnode = qpushll(qnode,30);
     qnode = qpushll(qnode,50);
     qnode = qpushll(qnode,60);
+    qnode = qpopll(qnode);
+    qnode = qpopll(qnode);
     display(qnode);
 return 0;
 }
