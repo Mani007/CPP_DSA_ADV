@@ -58,6 +58,7 @@ struct Queue * qpopll(struct Queue *q){
        // q= q->top;  // use Address and pen-paper diagram to visualize the pointers increment and decrement operations. 
         z->track -=1;
         free(p);
+        // We forgot to move the value of first pointer while poping.
         return z;
     }
 }
