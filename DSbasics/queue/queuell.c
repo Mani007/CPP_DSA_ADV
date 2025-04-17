@@ -77,7 +77,7 @@ int main() {
     struct Queue *qnode = createQueue(5);
     qnode = qpushll(qnode,10);
     qnode = qpushll(qnode,20);
-    qnode = qpushll(qnode,30);
+    //qnode = qpushll(qnode,30);
     // qnode = qpushll(qnode,40);
     // qnode = qpushll(qnode,50);
     //qnode = qpushll(qnode,60);
