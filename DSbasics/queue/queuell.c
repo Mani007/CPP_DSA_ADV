@@ -16,7 +16,7 @@ int isEmpty(struct Queue *q){
     }
 }
 int isFull(struct Queue *q){
-    if (q->size == q->track){
+    if (q->size <= q->track){
         printf("The stack is full \n");
         return 1;
     } else {
@@ -34,7 +34,7 @@ struct Queue * createQueue(int size){
 }
 struct Queue * qpushll(struct Queue *qq,int data){
     if(isFull(qq)==1){
-        printf("Full \n");
+        printf("Full - cannot push  \n");
         return qq;
     } else {
         // new node 
@@ -77,6 +77,7 @@ int main() {
     qnode = qpushll(qnode,10);
     qnode = qpushll(qnode,20);
     qnode = qpushll(qnode,30);
+    qnode = qpushll(qnode,40);
     qnode = qpushll(qnode,50);
     qnode = qpushll(qnode,60);
     qnode = qpopll(qnode);
