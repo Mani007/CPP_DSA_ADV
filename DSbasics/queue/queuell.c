@@ -82,7 +82,7 @@ int main() {
     // qnode = qpushll(qnode,50);
     //qnode = qpushll(qnode,60);
     qnode = qpopll(qnode);
-    qnode = qpopll(qnode);
+    //qnode = qpopll(qnode);
     display(qnode);
 return 0;
 }
