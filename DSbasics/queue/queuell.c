@@ -54,10 +54,11 @@ struct Queue * qpopll(struct Queue *q){
         return q;
     } else {
         struct Queue *p =q; // original pointer
-        q= q->top;  // use Address and pen-paper diagram to visualize the pointers increment and decrement operations. 
-        q->track -=1;
+        struct Queue *z =q->top; // next pointer
+       // q= q->top;  // use Address and pen-paper diagram to visualize the pointers increment and decrement operations. 
+        z->track -=1;
         free(p);
-        return q;
+        return z;
     }
 }
 void display(struct Queue *q){
