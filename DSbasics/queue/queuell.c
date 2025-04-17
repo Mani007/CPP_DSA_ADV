@@ -55,16 +55,18 @@ void display(struct Queue *q){
         struct Queue *p =q; // original pointer 
         while(q->top != NULL){  // q->top is the value of next pointer
             printf("The queue data is %d \n", q->qdata);
-            q->top = q;
+            q = q->top ;
         }
     }
 }
 int main() {
-    printf("Implementing Queue using Linked List");
+    printf("Implementing Queue using Linked List\n");
     struct Queue *qnode = createQueue(5);
     qnode = qpushll(qnode,10);
     qnode = qpushll(qnode,20);
     qnode = qpushll(qnode,30);
+    qnode = qpushll(qnode,50);
+    qnode = qpushll(qnode,60);
     display(qnode);
 return 0;
 }
