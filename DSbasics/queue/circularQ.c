@@ -63,7 +63,7 @@ void display(struct cqueue *cq){
         }
 }
 
-struct cqueue * popqueue(struct cqueue *cq){
+struct cqueue * popqueue(struct cqueue *cq){  // Use visualization to write the functions
     struct cqueue *first = cq->first; // first node of cqueue
     struct cqueue *nextnode = first->top; // getting the next node
     cq->first = nextnode; // changing the first pointer to nextnode
