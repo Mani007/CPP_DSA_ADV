@@ -16,14 +16,20 @@ int isEmpty(struct cqueue *cq){
     }
 }
 int isFull(struct cqueue *cq){
-    if (cq->first == cq->top){
+    if (cq->first == cq->top && cq->size == cq->track){
         printf("The Cqueue is full \n");
         return 1;
     } else {
         return 0;
     }
 }
-
+// trackcount function is used for making circular queue by adjusting cq->track from the start
+void trackcount(struct cqueue *cq){
+    cq->track = 0;
+    while (cq->top !=NULL){
+        cq->track +=1;
+    }
+}
 struct cqueue * createcqueue(int size){
     struct cqueue *cq = (struct cqueue *)malloc(sizeof(struct cqueue));  // This is just a single node as it is not an array
     cq->size = size;
@@ -56,12 +62,25 @@ void display(struct cqueue *cq){
             p = p->top;
         }
 }
+
+struct cqueue * popqueue(struct cqueue *cq){
+    struct cqueue *first = cq->first; // first node of cqueue
+    struct cqueue *nextnode = first->top; // getting the next node
+    cq->first = nextnode; // changing the first pointer to nextnode
+    cq->track -=1; // setting up track count to decrement
+    free(first); // free the memory space of first
+    return cq;
+}
 int main() {
     printf("Implementing Circular queue \n");
     struct cqueue *c = createcqueue(5);
     c = pushcqueue(c,10);
     c = pushcqueue(c,20);
     c = pushcqueue(c,30);
+    c = pushcqueue(c,50);
+    c = popqueue(c);
+    c = popqueue(c);
+
     display(c);
 return 0;
 }

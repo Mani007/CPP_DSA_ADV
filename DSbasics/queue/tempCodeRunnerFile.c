@@ -1,2 +1,2 @@
-qnode = qpushll(qnode,40);
-    // qnode = qpushll(qnode,50);
+c = popqueue(c);
+    // c = popqueue(c);
