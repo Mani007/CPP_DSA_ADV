@@ -80,7 +80,8 @@ int main() {
     c = pushcqueue(c,50);
     c = popqueue(c);
     c = popqueue(c);
-
+    c= pushcqueue(c,12);
+    c= pushcqueue(c,15);
     display(c);
 return 0;
 }
