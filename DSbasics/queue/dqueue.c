@@ -4,36 +4,53 @@
 struct dqueue {
     int data;
     int size;
-    int track;
-    struct dqueue *front;
-    struct dqueue *back;
-    struct dqueue *next;
+    int rtrack;
+    int ltrack;
+    struct dqueue *right;
+    struct dqueue *left;
+    
 };
 int isEmpty(struct dqueue *dq){
-    if (dq->track == 0){
+    if ((dq->rtrack+dq->ltrack) == 0){
         printf("The DQueue is empty. \n");
         return 1;
     } else {
         return 0;
     }
 }
-int isFull(struct dqueue *dq){}
+int isFull(struct dqueue *dq){
+    if ((dq->rtrack+dq->ltrack) == dq->size){
+        printf("The Dqueue is FULL. \n");
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
 struct dqueue * createdqueue(int size){
+    struct dqueue *dq = (struct dqueue *)malloc(sizeof(struct dqueue));
+    dq->size = size;
+    dq->ltrack = 0;
+    dq->rtrack = 0;
+    dq->right = dq;
+    dq->left = dq;
+    
+    return dq;
+}
+
+struct dqueue * pushright(struct dqueue *dq,int data){
     struct dqueue *newnode = (struct dqueue *)malloc(sizeof(struct dqueue));
-    newnode->size = size;
-    newnode->front = newnode;
-    newnode->back = NULL;
-    newnode->next = NULL;
-    newnode->track = 0;
+    dq->data = data;
+    newnode->right = dq->right;
+    newnode->left = dq->left;
+    
     return newnode;
 }
-struct dqueue * pushfront(struct dqueue *dq,int data){
-
-}
-struct dqueue * pushback(struct dqueue *dq,int data){}
-struct dqueue * popfront(struct dqueue *dq){}
-struct dqueue * popback(struct dqueue *dq){}
-void display(struct dqueue *dq){}
+struct dqueue * pushleft(struct dqueue *dq,int data){}
+struct dqueue * popright(struct dqueue *dq){}
+struct dqueue * popleft(struct dqueue *dq){}
+void displayright(struct dqueue *dq){}
+void displayleft(struct dqueue *dq){}
 int main() {
     printf("Implementation of double ended Queue \n");
 return 0;
