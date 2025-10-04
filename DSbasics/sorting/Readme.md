@@ -13,4 +13,6 @@ Basic sorting algorithms and their analysis based on time & space complexity. So
 6. Recursive(uses recursion) and non-recursive sorting   
 
 ## Bubble sort
+### Main objective is to send the biggest element at the last of the input. 
+#### So it finds the first biggest element and send it to the last, then it finds the second biggest element and send it to the last and so on till all the elements are arranged. We can also do reverse bubble sort for descending order.
 Algorithm uses n-1 passes to reach the sorting. 
