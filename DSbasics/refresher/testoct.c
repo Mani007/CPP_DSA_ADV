@@ -2,7 +2,7 @@
 void insertdata(int arr[], int index, int data, int length){
     //int len = sizeof(arr)/sizeof(arr[0]);
     int len = length;
-    if (index != 0 && index < len){
+    if (index < len){
         
         arr[index] = data;
         printf("Data inserted successfully!! at index %d with data %d \n", index, data);
@@ -11,7 +11,7 @@ void insertdata(int arr[], int index, int data, int length){
 }
 void displayarr(int arr[], int length){
     int i = 0;
-    for(i=0;i<=length;i++){
+    for(i=0;i<length;i++){
         printf("Element in index %d of array are %d \n",i,arr[i]);
     }
 }
