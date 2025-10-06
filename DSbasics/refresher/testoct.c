@@ -25,12 +25,16 @@ int main() {
     printf("Testing the programming skills\n");
     printf("Implementing Structure and pointer in C\n");
     struct data d1;
+    struct data *p1;
+    p1 = &d1;
+    p1->index = 1;
+    p1->d = 10;
     struct data d2;
-    d1.index = 1;
-    d2.index = 2;
-    d1.d = 10;
-    d2.d = 20;
-    printf("Index of d1 is %d and data is %d \n",d1.index,d1.d);
-    printf("Index of d2 is %d and data is %d \n",d2.index,d2.d);
+    struct data *p2;
+    p2 = &d2;
+    p2->index = 2;
+    p2->d = 20;
+    printf("Using pointer Index of d1 is %d and data is %d \n",p1->index,p1->d);
+    printf("Using pointer Index of d2 is %d and data is %d \n",p2->index,p2->d);
 return 0;
 }
