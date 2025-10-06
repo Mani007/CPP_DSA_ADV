@@ -18,6 +18,7 @@
 struct data{
     int index;
     int d;
+    struct data *next; // for storing address of next node
 };
 
 int main() {
