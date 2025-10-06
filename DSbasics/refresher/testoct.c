@@ -46,7 +46,7 @@ int main() {
     int i;
     for(i = 0; i<5; i++){
 
-        printf("Element in index %d of array are %d \n",i,*(ptr + i));
+        printf("Element in index %d  at address %p of array are %d \n",i,(ptr+i),*(ptr + i));
     }
 
 return 0;
