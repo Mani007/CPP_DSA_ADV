@@ -37,7 +37,7 @@ int main() {
     printf("Testing the programming skills\n");
     printf("Implementing array and pointer in C\n");
     int arr1[5]; // integer array of size 5
-    int *ptr = &arr1;
+    int *ptr = &arr1[0];
 
 return 0;
 }
