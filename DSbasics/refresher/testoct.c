@@ -37,17 +37,17 @@ int main() {
     printf("Testing the programming skills\n");
     printf("Implementing array and pointer in C\n");
     int arr1[5]; // integer array of size 5
-    int *ptr = &arr1[0];
-    *ptr = 10;
-    *(ptr+1) = 20;
-    *(ptr+2) = 30;
-    *(ptr+3) = 40;
-    *(ptr+4) = 50;
-    int i;
-    for(i = 0; i<5; i++){
+    int *ptr[] = &arr1; // this will represent pointer to ENTIRE array Wrong way
+    // *ptr = 10;
+    // *(ptr+1) = 20;
+    // *(ptr+2) = 30;
+    // *(ptr+3) = 40;
+    // *(ptr+4) = 50;
+    // int i;
+    // for(i = 0; i<5; i++){
 
-        printf("Element in index %d  at address %p of array are %d \n",i,(ptr+i),*(ptr + i));
-    }
+    //     printf("Element in index %d  at address %p of array are %d \n",i,(ptr+i),*(ptr + i));
+    // }
 
 return 0;
 }
