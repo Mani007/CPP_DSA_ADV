@@ -39,11 +39,15 @@ int main() {
     int arr1[5]; // integer array of size 5
     int *ptr = &arr1[0];
     *ptr = 10;
-    *(ptr+1) = 10;
-    *(ptr+2) = 10;
-    *(ptr+3) = 10;
-    *(ptr+4) = 10;
-    
+    *(ptr+1) = 20;
+    *(ptr+2) = 30;
+    *(ptr+3) = 40;
+    *(ptr+4) = 50;
+    int i;
+    for(i = 0; i<5; i++){
+
+        printf("Element in index %d of array are %d \n",i,*(ptr + i));
+    }
 
 return 0;
 }
