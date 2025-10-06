@@ -38,6 +38,12 @@ int main() {
     printf("Implementing array and pointer in C\n");
     int arr1[5]; // integer array of size 5
     int *ptr = &arr1[0];
+    *ptr = 10;
+    *(ptr+1) = 10;
+    *(ptr+2) = 10;
+    *(ptr+3) = 10;
+    *(ptr+4) = 10;
+    
 
 return 0;
 }
