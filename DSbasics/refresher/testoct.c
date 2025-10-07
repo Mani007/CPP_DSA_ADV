@@ -16,7 +16,7 @@
 //         printf("Element in index %d of array are %d \n",i,arr[i]);
 //     }
 // }
-struct Data{
+typedef struct Data{
     int d;
     struct data *next; // for storing address of next node
 } data;
@@ -25,7 +25,9 @@ int main() {
 
     printf("Testing the programming skills\n");
     printf("Implementing dynamic list and pointer in C\n");
-    struct Data *ptr = malloc(sizeof(data));
+    data d1; 
+
+    //data *ptr = malloc(sizeof(data));
     
 return 0;
 }
