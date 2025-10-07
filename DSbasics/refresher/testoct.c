@@ -25,7 +25,7 @@ int main() {
 
     printf("Testing the programming skills\n");
     printf("Implementing dynamic list and pointer in C\n");
-    struct Data *ptr = malloc(sizeof(struct Data));
+    struct Data *ptr = malloc(sizeof(data));
     
 return 0;
 }
