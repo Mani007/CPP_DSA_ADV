@@ -20,19 +20,49 @@ typedef struct Data{
     int d;
     struct data *next; // for storing address of next node
 } data;
-
+void insert(data *p,int index, int val, int last){
+    // check if the pointer is not the last node
+    if (index<last){
+        (p+index)->d = val;
+        (p+index)->next = ((p+index)+1);
+    } else {
+        printf("The list is full \n");
+    }
+}
+void read(data *p, int index, int last){
+    if (index<last){
+        printf("The value at index %d is %d \n", index, (p+index)->d);
+    } else {
+        printf("The display value does not exists \n");
+    }
+}
+void readAll(data *p, int last){
+    int i=0;
+    if(last != 0){
+        for(i = 0; i<last; i++){
+            printf("The data at index %d is %d \n", i, (p+i)->d);
+        }
+    } else {
+        printf("The index out of range. \n");
+    }
+}
 int main() {
 
     printf("Testing the programming skills\n");
     printf("Implementing dynamic list and pointer in C\n");
     data *d1 = (data *)malloc(5 * sizeof(data *)); // list of 5 structs
+    insert(d1,0,10,5);
+    insert(d1,1,20,5);
+    insert(d1,2,30,5);
+    insert(d1,3,40,5);
+    read(d1,1,5);
     // manually inserting and reading each value
-    d1->d = 10;
-    (d1+1)->d = 20;
-    (d1->next) = (d1+1);
-    printf("Value of d is %d at address is %p \n", d1->d,d1);
-    printf("Value of d is %d at address is %p \n", d1->d,(d1+1));
-    printf("Value of d is %d at address is %p \n", (d1+1)->d,(d1+1));
+    // d1->d = 10;
+    // (d1+1)->d = 20;
+    // (d1->next) = (d1+1);
+    // printf("Value of d is %d at address is %p \n", d1->d,d1);
+    // printf("Value of d is %d at address is %p \n", d1->d,(d1+1));
+    // printf("Value of d is %d at address is %p \n", (d1+1)->d,(d1+1));
 
     //data *ptr = malloc(sizeof(data));
     
