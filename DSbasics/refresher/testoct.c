@@ -49,7 +49,7 @@ void readAll(data *p, int last){
 int main() {
 
     printf("Testing the programming skills\n");
-    printf("Implementing dynamic list and pointer in C\n");
+    printf("Implementing dynamic list and pointer and function in C\n");
     data *d1 = (data *)malloc(5 * sizeof(data *)); // list of 5 structs
     insert(d1,0,10,5);
     insert(d1,1,20,5);
