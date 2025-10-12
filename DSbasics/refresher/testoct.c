@@ -24,7 +24,7 @@ void insert(data *p,int index, int val, int last){
     // check if the pointer is not the last node
     if (index<last){
         (p+index)->d = val;
-        (p+index)->next = ((p+index)+1);
+        (p+index)->next = (p+index+1);
     } else {
         printf("The list is full \n");
     }
@@ -55,7 +55,7 @@ int main() {
     insert(d1,1,20,5);
     insert(d1,2,30,5);
     insert(d1,3,40,5);
-    read(d1,1,5);
+    readAll(d1,5);
     // manually inserting and reading each value
     // d1->d = 10;
     // (d1+1)->d = 20;
