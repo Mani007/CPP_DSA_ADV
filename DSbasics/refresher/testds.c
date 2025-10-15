@@ -4,8 +4,8 @@
 // pass by reference 
 void push(int *a[], int *top, int val, int *last){
     if (*(top)<=*(last)){
-        a[*(top)] = val;
-        top = top+1;
+        *(a + *top) = val;
+        *top = *top+1;
     } else {
         printf("The Stack is full");
     }
@@ -20,8 +20,8 @@ int main() {
     int* arr[5];
     push(arr,t,20,l);
     push(arr,t,30,l);
-    printf("Value at index 0 is %d \n", *arr);
-    printf("Value at index 1 is %d \n", *arr+1);
+    printf("Value at index 0 is %d \n", *(arr));
+    printf("Value at index 1 is %d \n", *(arr+1));
 
 return 0;
 }
