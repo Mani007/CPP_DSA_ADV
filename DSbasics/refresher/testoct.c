@@ -46,11 +46,26 @@ void readAll(data *p, int last){
         printf("The index out of range. \n");
     }
 }
+
+void pushstack(data *p, int index,  int val, int last){
+    // check if the pointer is not the last node
+    if (index<last){
+        (p+index)->d = val;
+        (p+index)->next = (p+index+1);
+    } else {
+        printf("The list is full \n");
+    }
+}
+void popstack(data *p, int index, int last){
+    // Implement it later 
+    TODO: Later implementation
+}
 int main() {
 
     printf("Testing the programming skills\n");
     printf("Implementing dynamic list and pointer and function in C\n");
     data *d1 = (data *)malloc(5 * sizeof(data *)); // list of 5 structs
+    int *top = &d1[0];
     insert(d1,0,10,5);
     insert(d1,1,20,5);
     insert(d1,2,30,5);

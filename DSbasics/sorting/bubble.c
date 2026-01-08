@@ -6,7 +6,9 @@ void printArray(int* a,int n){
     }
 }
 
-
+void bubbleSort(int* a,int n){
+    
+}
 int main() {
     int a[] = {12,3,9,2,4,7};
     int n=6;
